@@ -1,0 +1,31 @@
+<?php
+$productos["logDescription"] = "El registro en productos fue guardado con los siguientes datos:";
+$productos["logUpdate"] = "El registro en productos fue actualizado con los siguientes datos:";
+$productos["logDeleted"] = "El registro en productos fue eliminado con los siguientes datos:";
+$productos["msg_delete"] = "El Registro en productos fue eliminado correctamente:";
+$productos["add"] = "Agregar productos";
+$productos["edit"] = "Editar productos";
+$productos["createEdit"] = "Crear / Editar";
+$productos["title"] = "Admon. productos";
+$productos["subtitle"] = "Lista productos";
+$productos["fields"]["idCategory"] = "Categoria";
+$productos["fields"]["barcode"] = "Código de Barras";
+$productos["fields"]["idSelectCategory"] = "Seleccione Categoria";
+$productos["fields"]["description"] = "Descripción";
+$productos["fields"]["stock"] = "Stock";
+$productos["fields"]["buyPrice"] = "Precio de compra";
+$productos["fields"]["salePrice"] = "Precio de venta";
+$productos["fields"]["porcentSale"] = "% de utilidad";
+$productos["fields"]["porcentTax"] = "% de IVA";
+$productos["fields"]["routeImage"] = "Imagen";
+$productos["fields"]["created_at"] = "Fecha Creacion";
+$productos["fields"]["deleted_at"] = "Fecha de Elimiminacion";
+$productos["fields"]["updated_at"] = "Fecha de Modificacion";
+
+$productos["fields"]["actions"] = "Acciones";
+$productos["msg"]["msg_insert"] = "Registro agregado correctamente.";
+$productos["msg"]["msg_update"] = "Registro modificado correctamente.";
+$productos["msg"]["msg_delete"] = "Registro eliminado correctamente.";
+$productos["msg"]["msg_get"] = "Registro obtenido correctamente.";
+$productos["msg"]["msg_get_fail"] = "Registro no encontrado o eliminado.";
+return $productos;

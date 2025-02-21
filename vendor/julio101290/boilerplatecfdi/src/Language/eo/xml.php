@@ -1,0 +1,57 @@
+ <?php
+ 
+ $xml["logDescription"] = "La registro XML estis konservita kun la sekvaj datumoj:";
+ $xml["logUpdate"] = "La registro XML estis ĝisdatigita kun la sekvaj datumoj:";
+ $xml["logDeleted"] = "La registro XML estis forigita kun la sekvaj datumoj:";
+ $xml["msg_delete"] = "La registro XML estis sukcese forigita:";
+ $xml["add"] = "Aldoni XML";
+ $xml["edit"] = "Redakti XML";
+ $xml["createEdit"] = "Krei / Redakti";
+ $xml["title"] = "Administrado de XML";
+ $xml["subtitle"] = "Listo de XML-oj";
+ $xml["companie"] = "Kompanio";
+ $xml["tipoComprobante"] = "Speco de pruvo"; // "Tipo de comprobante" se traduce como "speco de pruvo" (tipo de comprobante)
+ $xml["emitidoRecibido"] = "Emitita / Ricevita";
+ $xml["RFCEmisor"] = "RFC de la eldonanto"; // RFC se traduce como "RFC de la eldonanto" (RFC del emisor)
+ $xml["RFCReceptor"] = "RFC de la ricevanto";
+ $xml["usoCFDI"] = "Uzo de CFDI"; // CFDI se suele dejar en su forma original o traducir como "elektronika fakturo"
+ $xml["metodoPago"] = "Pagmaniero";
+ $xml["formaPago"] = "Pagoformo";
+ $xml["status"] = "Statuso";
+ $xml["statusVigente"] = "Valida";
+ $xml["statusCancelado"] = "Nuligita";
+ $xml["statusAlls"] = "Ĉiuj";
+ $xml["selectTipoComprobante"] = "Elektu specon de pruvo";
+ $xml["selectRFCEmisor"] = "Elektu RFC de la eldonanto";
+ $xml["selectRFCReceptor"] = "Elektu RFC de la ricevanto";
+ $xml["selectUsoCFDI"] = "Elektu uzon de CFDI";
+ $xml["selectMetodoPago"] = "Elektu pagmanieron";
+ $xml["selectFormaPago"] = "Elektu pagoformon";
+ $xml["emitido"] = "Emitita";
+ $xml["recibido"] = "Ricevita";
+ $xml["emitidoRecibidoAlls"] = "Ĉiuj";
+ $xml["fields"]["select"] = "Elektu";
+ $xml["fields"]["uuidTimbre"] = "UUID de la stampo"; // UUID Timbre se traduce como "UUID de la stampo" (UUID del sello electrónico)
+ $xml["fields"]["archivoXML"] = "XML-dosiero";
+ $xml["fields"]["serie"] = "Serio";
+ $xml["fields"]["folio"] = "Folio";
+ $xml["fields"]["RFCEmisor"] = "RFC de la eldonanto";
+ $xml["fields"]["RFCReceptor"] = "RFC de la ricevanto";
+ $xml["fields"]["nombreEmisor"] = "Nomo de la eldonanto"; // Aquí hay un error en el original, debería ser "Nombre del Emisor"
+ $xml["fields"]["nombreReceptor"] = "Nomo de la ricevanto";
+ $xml["fields"]["tipoComprobante"] = "Speco de pruvo";
+ $xml["fields"]["fecha"] = "Dato";
+ $xml["fields"]["fechaTimbrado"] = "Dato de la stampo";
+ $xml["fields"]["total"] = "Totalo";
+ $xml["fields"]["created_at"] = "Kreita je";
+ $xml["fields"]["deleted_at"] = "Forigita je";
+ $xml["fields"]["updated_at"] = "Ĝisdatigita je";
+ $xml["fields"]["uuidPaquete"] = "UUID de la pakaĵo";
+ $xml["fields"]["actions"] = "Agoj";       
+ $xml["msg"]["msg_insert"] = "Registro sukcese aldonita.";
+ $xml["msg"]["msg_update"] = "Registro sukcese modifita.";
+ $xml["msg"]["msg_delete"] = "Registro sukcese forigita.";
+ $xml["msg"]["msg_get"] = "Registro sukcese akirita.";
+ $xml["msg"]["msg_get_fail"] = "Registro ne trovita aŭ forigita.";
+    return $xml;
+            

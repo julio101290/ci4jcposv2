@@ -1,0 +1,92 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use Composer\Autoload\ClassLoader;
+use PhpCfdi\CfdiToPdf\Script\ConvertOptions;
+use PhpCfdi\CfdiToPdf\Script\ConvertScript;
+
+exit(call_user_func(function (array $arguments): int {
+    try {
+
+        set_error_handler(function (int $errno , string $errstr): bool {
+            if (in_array($errno, [E_WARNING, E_USER_ERROR, E_USER_WARNING], true)) {
+                throw new Exception("[$errno] $errstr", $errno);
+            }
+            return true; // do not continue with normal error handler
+        });
+
+        $loadComposerLoader = function (array $locations) : bool {
+            foreach ($locations as $autoload) {
+                if (is_readable($autoload) && is_file($autoload)) {
+                    $classLoader = require $autoload;
+                    if ($classLoader instanceof ClassLoader) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        };
+
+        $autoloadFound = $loadComposerLoader([
+            __DIR__ . '/../vendor/autoload.php',    // in bin/
+            dirname(__DIR__, 3) . '/autoload.php',  // in vendor/PhpCfdi/CfdiToPdf/bin
+            __DIR__ . '/../autoload.php',           // in vendor/bin/
+        ]);
+        if (! $autoloadFound) {
+            throw new RuntimeException('Cannot found autoload.php, did you run composer update?');
+        }
+
+        $versionGetter = function (): string {
+            $versionFile = __DIR__ . '/version.txt';
+            $version = '';
+            if (is_readable($versionFile)) {
+                $version = trim(strval(file_get_contents($versionFile)));
+            }
+            if ('' === $version) {
+                $version = 'development';
+            }
+            return $version;
+        };
+
+        $command = basename(__FILE__);
+        array_shift($arguments);
+        $options = ConvertOptions::createFromArguments($arguments);
+
+        if ($options->askForVersion()) {
+            echo "$command version {$versionGetter()}" . PHP_EOL;
+            return 0;
+        }
+
+        if ($options->askForHelp()) {
+            echo implode(PHP_EOL, [
+                $command . ' [options] <cfdi-file> [<pdf-file>]',
+                '  -h, --help                Show this help',
+                '  -V, --version             Show command version',
+                '  -d, --dirty               Do not try to clean up the cfdi file',
+                '  -f, --fonts-dir           Path where TCPDF fonts are located',
+                '  -l, --resource-location   Use this path to store the xml resources locally,',
+                '                            if none then it will always download xlst resources',
+                '  cfdi-file                 Path of the XML file (input file)',
+                '  pdf-file                  Path of the PDF file (output file) if none then it will remove',
+                '                            ".xml" extension and suffix ".pdf" extension',
+                ''
+            ]);
+            return 0;
+        }
+
+        $script = new ConvertScript();
+        $script->run($options);
+        echo $options->outputFile() . PHP_EOL;
+
+        return 0;
+    } catch (Throwable $exception) {
+        // white/red message reset-color EOL
+        $setColor = "\033[1;31m";   // light-red
+        $resetColor = "\033[0m";    // default
+        file_put_contents('php://stderr', $setColor . $exception->getMessage() . $resetColor . PHP_EOL, FILE_APPEND);
+
+        return 1;
+    }
+}, $argv));

@@ -1,0 +1,68 @@
+{
+    "name": "phpcfdi/cfdi-cleaner",
+    "description": "Clean up Mexican CFDI",
+    "license": "MIT",
+    "keywords": [
+        "cfdi",
+        "sat",
+        "mexico"
+    ],
+    "authors": [
+        {
+            "name": "Carlos C Soto",
+            "email": "eclipxe13@gmail.com"
+        }
+    ],
+    "homepage": "https://github.com/phpcfdi/cfdi-cleaner",
+    "require": {
+        "php": ">=7.3",
+        "ext-dom": "*",
+        "ext-libxml": "*",
+        "symfony/polyfill-php80": "^1.22"
+    },
+    "require-dev": {
+        "ext-json": "*",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhpCfdi\\CfdiCleaner\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PhpCfdi\\CfdiCleaner\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "dev:build": [
+            "@dev:fix-style",
+            "@dev:test"
+        ],
+        "dev:check-style": [
+            "@php tools/composer-normalize normalize --dry-run",
+            "@php tools/php-cs-fixer fix --dry-run --verbose",
+            "@php tools/phpcs --colors -sp"
+        ],
+        "dev:coverage": [
+            "@php -dzend_extension=xdebug.so -dxdebug.mode=coverage vendor/bin/phpunit --coverage-html build/coverage/html/"
+        ],
+        "dev:fix-style": [
+            "@php tools/composer-normalize normalize",
+            "@php tools/php-cs-fixer fix --verbose",
+            "@php tools/phpcbf --colors -sp"
+        ],
+        "dev:test": [
+            "@dev:check-style",
+            "@php vendor/bin/phpunit --testdox --verbose --stop-on-failure",
+            "@php tools/phpstan analyse --verbose"
+        ]
+    },
+    "scripts-descriptions": {
+        "dev:build": "DEV: run dev:fix-style and dev:tests, run before pull request",
+        "dev:check-style": "DEV: search for code style errors using composer-normalize, php-cs-fixer and phpcs",
+        "dev:coverage": "DEV: run phpunit with xdebug and storage coverage in build/coverage/html/",
+        "dev:fix-style": "DEV: fix code style errors using composer-normalize, php-cs-fixer and phpcbf",
+        "dev:test": "DEV: run dev:check-style, phpunit and phpstan"
+    }
+}
