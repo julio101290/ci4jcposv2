@@ -1,6 +1,7 @@
 # `eclipxe/enum`
 
 [![Source Code][badge-source]][source]
+[![Packagist PHP Version Support][badge-php-version]][php-version]
 [![Latest Version][badge-release]][release]
 [![Software License][badge-license]][license]
 [![Build Status][badge-build]][build]
@@ -14,10 +15,12 @@ After reading the article [PHP Enums from Brent Roose](https://stitcher.io/blog/
 the implementation made on [spatie/enum](https://github.com/spatie/enum) I think that it overloaded
 my expectations. Maybe spatie/enum version 1.0 was more close to what I needed.
 
-So, I created this framework agnostic implementation library about the same concept.
+So, I created this framework-agnostic implementation library about the same concept.
 
-As of PHP 8.1 enums will be part of the language, it means that this library will not be required anymore. 
-Check the RFC <https://wiki.php.net/rfc/enumerations> and adapt your code to use PHP Enums.
+As of PHP 8.1 enums are part of the language, it means that this library will not be required anymore. 
+Read the PHP documentation <https://www.php.net/manual/en/language.enumerations.php> and adapt your code.
+One big difference between PHP enums and the objects on this library is that native PHP enums cannot
+use the magic method `__toString` (they are not *`Stringable`*), and the enums on this library are.
 
 ## Installation
 
@@ -84,7 +87,7 @@ $other = new Stages($purged);
 // create from static method
 $purged = Stages::purged();
 
-// create from static method is not case sensitive as methods are not
+// create from static method is not case-sensitive as methods are not
 $purged = Stages::{'PURGED'}();
 
 // throws a BadMethodCallException because foobar is not part of the enum
@@ -217,7 +220,7 @@ use Eclipxe\Enum\Tests\Fixtures\WeekDays;
 new WeekDays(0); // throws IndexNotFoundException
 new WeekDays(1); // WeekDays {value: 'Monday', index: 1}
 
-new WeekDays('sunday'); // throws ValueNotFoundException (it is case sensitive)
+new WeekDays('sunday'); // throws ValueNotFoundException (it is case-sensitive)
 new WeekDays('Sunday'); // WeekDays {value: 'Sunday', index: 7}
 ```
 
@@ -253,7 +256,7 @@ as they must only exist inside this project. Do not use them in your project.
 ## Contributing
 
 Contributions are welcome! Please read [CONTRIBUTING][] for details
-and don't forget to take a look in the [TODO][] and [CHANGELOG][] files.
+and don't forget to take a look the [TODO][] and [CHANGELOG][] files.
 
 
 ## Copyright and License
@@ -267,6 +270,7 @@ and licensed for use under the MIT License (MIT). Please see [LICENSE][] for mor
 [todo]: https://github.com/eclipxe13/enum/blob/main/docs/TODO.md
 
 [source]: https://github.com/eclipxe13/enum
+[php-version]: https://packagist.org/packages/eclipxe/enum
 [release]: https://github.com/eclipxe13/enum/releases
 [license]: https://github.com/eclipxe13/enum/blob/main/LICENSE
 [build]: https://github.com/eclipxe13/enum/actions/workflows/build.yml?query=branch:main
@@ -275,9 +279,10 @@ and licensed for use under the MIT License (MIT). Please see [LICENSE][] for mor
 [downloads]: https://packagist.org/packages/eclipxe/enum
 
 [badge-source]: https://img.shields.io/badge/source-eclipxe13/enum-blue?style=flat-square
+[badge-php-version]: https://img.shields.io/packagist/php-v/eclipxe/enum?style=flat-square
 [badge-release]: https://img.shields.io/github/release/eclipxe13/enum?style=flat-square
 [badge-license]: https://img.shields.io/github/license/eclipxe13/enum?style=flat-square
-[badge-build]: https://img.shields.io/github/workflow/status/eclipxe13/enum/build/main?style=flat-square
+[badge-build]: https://img.shields.io/github/actions/workflow/status/eclipxe13/enum/build.yml?branch=main&style=flat-square
 [badge-quality]: https://img.shields.io/scrutinizer/g/eclipxe13/enum/main?style=flat-square
 [badge-coverage]: https://img.shields.io/scrutinizer/coverage/g/eclipxe13/enum/main?style=flat-square
 [badge-downloads]: https://img.shields.io/packagist/dt/eclipxe/enum?style=flat-square

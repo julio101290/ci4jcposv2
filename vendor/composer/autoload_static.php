@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
+class ComposerStaticInitd61c06d1401364c2c0d88657d69bf4ba
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -23,9 +23,11 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
             'julio101290\\boilerplatestorages\\' => 32,
             'julio101290\\boilerplatesettings\\' => 32,
             'julio101290\\boilerplatesells\\' => 29,
+            'julio101290\\boilerplateremolques\\' => 33,
             'julio101290\\boilerplatequotes\\' => 30,
             'julio101290\\boilerplateproducts\\' => 32,
             'julio101290\\boilerplatelog\\' => 27,
+            'julio101290\\boilerplatelocations\\' => 33,
             'julio101290\\boilerplateinventory\\' => 33,
             'julio101290\\boilerplatedrivers\\' => 31,
             'julio101290\\boilerplatecustumers\\' => 33,
@@ -33,6 +35,7 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
             'julio101290\\boilerplatecomplementopago\\' => 39,
             'julio101290\\boilerplatecompanies\\' => 33,
             'julio101290\\boilerplatecashtonnage\\' => 35,
+            'julio101290\\boilerplatecartaporte\\' => 34,
             'julio101290\\boilerplatebranchoffice\\' => 36,
             'julio101290\\boilerplatebackup\\' => 30,
             'julio101290\\boilerplate\\' => 24,
@@ -141,6 +144,10 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         array (
             0 => __DIR__ . '/..' . '/julio101290/boilerplatesells/src',
         ),
+        'julio101290\\boilerplateremolques\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/julio101290/boilerplateremolques/src',
+        ),
         'julio101290\\boilerplatequotes\\' => 
         array (
             0 => __DIR__ . '/..' . '/julio101290/boilerplatequotes/src',
@@ -152,6 +159,10 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'julio101290\\boilerplatelog\\' => 
         array (
             0 => __DIR__ . '/..' . '/julio101290/boilerplatelog/src',
+        ),
+        'julio101290\\boilerplatelocations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/julio101290/boilerplatelocations/src',
         ),
         'julio101290\\boilerplateinventory\\' => 
         array (
@@ -180,6 +191,10 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'julio101290\\boilerplatecashtonnage\\' => 
         array (
             0 => __DIR__ . '/..' . '/julio101290/boilerplatecashtonnage/src',
+        ),
+        'julio101290\\boilerplatecartaporte\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/julio101290/boilerplatecartaporte/src',
         ),
         'julio101290\\boilerplatebranchoffice\\' => 
         array (
@@ -291,7 +306,8 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         ),
         'Hermawan\\DataTables\\' => 
         array (
-            0 => __DIR__ . '/..' . '/hermawan/codeigniter4-datatables/src',
+            0 => __DIR__ . '/../..' . '/app/Overrides/DataTables',
+            1 => __DIR__ . '/..' . '/hermawan/codeigniter4-datatables/src',
         ),
         'Faker\\' => 
         array (
@@ -355,12 +371,16 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
     public static $classMap = array (
         'App\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Controllers/AuthController.php',
         'App\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/Controllers/BaseController.php',
+        'App\\Controllers\\CartaporteController' => __DIR__ . '/../..' . '/app/Controllers/CartaporteController.php',
         'App\\Controllers\\Home' => __DIR__ . '/../..' . '/app/Controllers/Home.php',
+        'App\\Controllers\\SapservicelayerController' => __DIR__ . '/../..' . '/app/Controllers/SapservicelayerController.php',
+        'App\\Database\\Seeds\\BoilerplateSeeder' => __DIR__ . '/../..' . '/app/Database/Seeds/BoilerplateSeeder.php',
         'App\\Entities\\User' => __DIR__ . '/../..' . '/app/Entities/User.php',
         'App\\Filters\\LoginFilter' => __DIR__ . '/../..' . '/app/Filters/LoginFilter.php',
         'App\\Filters\\PermissionFilter' => __DIR__ . '/../..' . '/app/Filters/PermissionFilter.php',
         'App\\Filters\\RoleFilter' => __DIR__ . '/../..' . '/app/Filters/RoleFilter.php',
         'App\\Models\\LoginModel' => __DIR__ . '/../..' . '/app/Models/LoginModel.php',
+        'App\\Models\\SapservicelayerModel' => __DIR__ . '/../..' . '/app/Models/SapservicelayerModel.php',
         'App\\Models\\UserModel' => __DIR__ . '/../..' . '/app/Models/UserModel.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
@@ -740,6 +760,7 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'CfdiUtils\\Utils\\Crp20277Fixer' => __DIR__ . '/..' . '/eclipxe/cfdiutils/src/CfdiUtils/Utils/Crp20277Fixer.php',
         'CfdiUtils\\Utils\\CurrencyDecimals' => __DIR__ . '/..' . '/eclipxe/cfdiutils/src/CfdiUtils/Utils/CurrencyDecimals.php',
         'CfdiUtils\\Utils\\Format' => __DIR__ . '/..' . '/eclipxe/cfdiutils/src/CfdiUtils/Utils/Format.php',
+        'CfdiUtils\\Utils\\RegimenCapitalRemover' => __DIR__ . '/..' . '/eclipxe/cfdiutils/src/CfdiUtils/Utils/RegimenCapitalRemover.php',
         'CfdiUtils\\Utils\\Rfc' => __DIR__ . '/..' . '/eclipxe/cfdiutils/src/CfdiUtils/Utils/Rfc.php',
         'CfdiUtils\\Utils\\SatNsDefinitionsMover' => __DIR__ . '/..' . '/eclipxe/cfdiutils/src/CfdiUtils/Utils/SatNsDefinitionsMover.php',
         'CfdiUtils\\Utils\\SchemaLocations' => __DIR__ . '/..' . '/eclipxe/cfdiutils/src/CfdiUtils/Utils/SchemaLocations.php',
@@ -1848,13 +1869,14 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'Faker\\Provider\\zh_TW\\Text' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/zh_TW/Text.php',
         'Faker\\UniqueGenerator' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/UniqueGenerator.php',
         'Faker\\ValidGenerator' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/ValidGenerator.php',
-        'Hermawan\\DataTables\\Column' => __DIR__ . '/..' . '/hermawan/codeigniter4-datatables/src/Column.php',
-        'Hermawan\\DataTables\\DataTable' => __DIR__ . '/..' . '/hermawan/codeigniter4-datatables/src/DataTable.php',
-        'Hermawan\\DataTables\\DataTableColumnDefs' => __DIR__ . '/..' . '/hermawan/codeigniter4-datatables/src/DataTableColumnDefs.php',
-        'Hermawan\\DataTables\\DataTableQuery' => __DIR__ . '/..' . '/hermawan/codeigniter4-datatables/src/DataTableQuery.php',
-        'Hermawan\\DataTables\\Helper' => __DIR__ . '/..' . '/hermawan/codeigniter4-datatables/src/Helper.php',
-        'Hermawan\\DataTables\\Request' => __DIR__ . '/..' . '/hermawan/codeigniter4-datatables/src/Request.php',
+        'Hermawan\\DataTables\\Column' => __DIR__ . '/../..' . '/app/Overrides/DataTables/Column.php',
+        'Hermawan\\DataTables\\DataTable' => __DIR__ . '/../..' . '/app/Overrides/DataTables/DataTable.php',
+        'Hermawan\\DataTables\\DataTableColumnDefs' => __DIR__ . '/../..' . '/app/Overrides/DataTables/DataTableColumnDefs.php',
+        'Hermawan\\DataTables\\DataTableQuery' => __DIR__ . '/../..' . '/app/Overrides/DataTables/DataTableQuery.php',
+        'Hermawan\\DataTables\\Helper' => __DIR__ . '/../..' . '/app/Overrides/DataTables/Helper.php',
+        'Hermawan\\DataTables\\Request' => __DIR__ . '/../..' . '/app/Overrides/DataTables/Request.php',
         'Laminas\\Escaper\\Escaper' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/Escaper.php',
+        'Laminas\\Escaper\\EscaperInterface' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/EscaperInterface.php',
         'Laminas\\Escaper\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/Exception/ExceptionInterface.php',
         'Laminas\\Escaper\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/Exception/InvalidArgumentException.php',
         'Laminas\\Escaper\\Exception\\RuntimeException' => __DIR__ . '/..' . '/laminas/laminas-escaper/src/Exception/RuntimeException.php',
@@ -3960,6 +3982,8 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'Spipu\\Html2Pdf\\Parsing\\TagParser' => __DIR__ . '/..' . '/spipu/html2pdf/src/Parsing/TagParser.php',
         'Spipu\\Html2Pdf\\Parsing\\TextParser' => __DIR__ . '/..' . '/spipu/html2pdf/src/Parsing/TextParser.php',
         'Spipu\\Html2Pdf\\Parsing\\Token' => __DIR__ . '/..' . '/spipu/html2pdf/src/Parsing/Token.php',
+        'Spipu\\Html2Pdf\\Security\\Security' => __DIR__ . '/..' . '/spipu/html2pdf/src/Security/Security.php',
+        'Spipu\\Html2Pdf\\Security\\SecurityInterface' => __DIR__ . '/..' . '/spipu/html2pdf/src/Security/SecurityInterface.php',
         'Spipu\\Html2Pdf\\SvgDrawer' => __DIR__ . '/..' . '/spipu/html2pdf/src/SvgDrawer.php',
         'Spipu\\Html2Pdf\\Tag\\AbstractHtmlTag' => __DIR__ . '/..' . '/spipu/html2pdf/src/Tag/AbstractHtmlTag.php',
         'Spipu\\Html2Pdf\\Tag\\AbstractSvgTag' => __DIR__ . '/..' . '/spipu/html2pdf/src/Tag/AbstractSvgTag.php',
@@ -4028,8 +4052,6 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'TCPDF_FONTS' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_fonts.php',
         'TCPDF_FONT_DATA' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_font_data.php',
         'TCPDF_IMAGES' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_images.php',
-        'TCPDF_IMPORT' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_import.php',
-        'TCPDF_PARSER' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_parser.php',
         'TCPDF_STATIC' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_static.php',
         'Tests\\Support\\Database\\Seeds\\ExampleSeeder' => __DIR__ . '/../..' . '/tests/_support/Database/Seeds/ExampleSeeder.php',
         'Tests\\Support\\Libraries\\ConfigReader' => __DIR__ . '/../..' . '/tests/_support/Libraries/ConfigReader.php',
@@ -4053,6 +4075,9 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'XmlResourceRetriever\\Utils' => __DIR__ . '/..' . '/eclipxe/xmlresourceretriever/src/XmlResourceRetriever/Utils.php',
         'XmlResourceRetriever\\XsdRetriever' => __DIR__ . '/..' . '/eclipxe/xmlresourceretriever/src/XmlResourceRetriever/XsdRetriever.php',
         'XmlResourceRetriever\\XsltRetriever' => __DIR__ . '/..' . '/eclipxe/xmlresourceretriever/src/XmlResourceRetriever/XsltRetriever.php',
+        'julio101290\\BoilerplateComprobanteRD\\Database\\Seeds\\BoilerplateComprobanteRD' => __DIR__ . '/..' . '/julio101290/boilerplatecomprobanterd/src/Database/Seeds/BoilerplateComprobanteRD.php',
+        'julio101290\\Boilerplatedrivers\\Database\\Seeds\\BoilerplateDrivers' => __DIR__ . '/..' . '/julio101290/boilerplatedrivers/src/Database/Seeds/BoilerplateDrivers.php',
+        'julio101290\\Boilerplatevehicles\\Database\\Seeds\\BoilerplateVehicles' => __DIR__ . '/..' . '/julio101290/boilerplatevehicles/src/Database/Seeds/BoilerplateVehicles.php',
         'julio101290\\boilerplateCFDIElectronicSeries\\Controllers\\SeriesfacturaelectronicaController' => __DIR__ . '/..' . '/julio101290/boilerplatecfdielectronicseries/src/Controllers/SeriesfacturaelectronicaController.php',
         'julio101290\\boilerplateCFDIElectronicSeries\\Models\\SeriesfacturaelectronicaModel' => __DIR__ . '/..' . '/julio101290/boilerplatecfdielectronicseries/src/Models/SeriesfacturaelectronicaModel.php',
         'julio101290\\boilerplateCFDI\\Commands\\InstallCommandCFDI' => __DIR__ . '/..' . '/julio101290/boilerplatecfdi/src/Commands/InstallCommandCFDI.php',
@@ -4062,6 +4087,7 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'julio101290\\boilerplate\\Commands\\InstallCommand' => __DIR__ . '/..' . '/julio101290/boilerplate/src/Commands/InstallCommand.php',
         'julio101290\\boilerplate\\Commands\\PublishCommand' => __DIR__ . '/..' . '/julio101290/boilerplate/src/Commands/PublishCommand.php',
         'julio101290\\boilerplate\\Config\\Boilerplate' => __DIR__ . '/..' . '/julio101290/boilerplate/src/Config/Boilerplate.php',
+        'julio101290\\boilerplate\\Controllers\\AutoCrudController' => __DIR__ . '/..' . '/julio101290/boilerplate/src/Controllers/AutoCrudController.php',
         'julio101290\\boilerplate\\Controllers\\BaseController' => __DIR__ . '/..' . '/julio101290/boilerplate/src/Controllers/BaseController.php',
         'julio101290\\boilerplate\\Controllers\\DashboardController' => __DIR__ . '/..' . '/julio101290/boilerplate/src/Controllers/DashboardController.php',
         'julio101290\\boilerplate\\Controllers\\Users\\MenuController' => __DIR__ . '/..' . '/julio101290/boilerplate/src/Controllers/Users/MenuController.php',
@@ -4087,11 +4113,20 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'julio101290\\boilerplatebranchoffice\\Database\\Seeds\\BoilerplateBranchofficeCRUD' => __DIR__ . '/..' . '/julio101290/boilerplatebranchoffice/src/Database/Seeds/BoilerplateBranchofficeCRUD.php',
         'julio101290\\boilerplatebranchoffice\\Models\\BranchofficesModel' => __DIR__ . '/..' . '/julio101290/boilerplatebranchoffice/src/Models/BranchofficesModel.php',
         'julio101290\\boilerplatebranchoffice\\Models\\UsuariosSucursalModel' => __DIR__ . '/..' . '/julio101290/boilerplatebranchoffice/src/Models/UsuariosSucursalModel.php',
+        'julio101290\\boilerplatecartaporte\\Commands\\InstallCommandCartaporte' => __DIR__ . '/..' . '/julio101290/boilerplatecartaporte/src/Commands/InstallCommandCartaporte.php',
+        'julio101290\\boilerplatecartaporte\\Commands\\InstallCommandCartaprote' => __DIR__ . '/..' . '/julio101290/boilerplatecartaporte/src/Commands/InstallCommandCartaprote.php',
+        'julio101290\\boilerplatecartaporte\\Controllers\\CartaPorteController' => __DIR__ . '/..' . '/julio101290/boilerplatecartaporte/src/Controllers/CartaPorteController.php',
+        'julio101290\\boilerplatecartaporte\\Database\\Seeds\\BoilerplateCartaPorte' => __DIR__ . '/..' . '/julio101290/boilerplatecartaporte/src/Database/Seeds/BoilerplateCartaPorte.php',
+        'julio101290\\boilerplatecartaporte\\Models\\CartaPorteDetailsModel' => __DIR__ . '/..' . '/julio101290/boilerplatecartaporte/src/Models/CartaPorteDetailsModel.php',
+        'julio101290\\boilerplatecartaporte\\Models\\CartaPorteModel' => __DIR__ . '/..' . '/julio101290/boilerplatecartaporte/src/Models/CartaPorteModel.php',
+        'julio101290\\boilerplatecartaporte\\Models\\MercanciascartaporteModel' => __DIR__ . '/..' . '/julio101290/boilerplatecartaporte/src/Models/MercanciascartaporteModel.php',
         'julio101290\\boilerplatecashtonnage\\Commands\\InstallCommandCashTonnage' => __DIR__ . '/..' . '/julio101290/boilerplatecashtonnage/src/Commands/InstallCommandCashTonnage.php',
         'julio101290\\boilerplatecashtonnage\\Controllers\\ArqueoCajaController' => __DIR__ . '/..' . '/julio101290/boilerplatecashtonnage/src/Controllers/ArqueoCajaController.php',
         'julio101290\\boilerplatecashtonnage\\Controllers\\PDFLayoutReportLandscape' => __DIR__ . '/..' . '/julio101290/boilerplatecashtonnage/src/Controllers/PDFLayoutReportLandscape.php',
         'julio101290\\boilerplatecashtonnage\\Database\\Seeds\\BoilerplateCashTonnage' => __DIR__ . '/..' . '/julio101290/boilerplatecashtonnage/src/Database/Seeds/BoilerplateCashTonnage.php',
         'julio101290\\boilerplatecashtonnage\\Models\\ArqueoCajaModel' => __DIR__ . '/..' . '/julio101290/boilerplatecashtonnage/src/Models/ArqueoCajaModel.php',
+        'julio101290\\boilerplatecfdielectronicseries\\Commands\\InstallCommandCFDIElectronicSeries' => __DIR__ . '/..' . '/julio101290/boilerplatecfdielectronicseries/src/Commands/InstallCommandCFDIElectronicSeries.php',
+        'julio101290\\boilerplatecfdielectronicseries\\Database\\Seeds\\BoilerplateCFDIElectronicSeries' => __DIR__ . '/..' . '/julio101290/boilerplatecfdielectronicseries/src/Database/Seeds/BoilerplateCFDIElectronicSeries.php',
         'julio101290\\boilerplatecompanies\\Commands\\InstallCommandCompanies' => __DIR__ . '/..' . '/julio101290/boilerplatecompanies/src/Commands/InstallCommandCompanies.php',
         'julio101290\\boilerplatecompanies\\Controllers\\EmpresasController' => __DIR__ . '/..' . '/julio101290/boilerplatecompanies/src/Controllers/EmpresasController.php',
         'julio101290\\boilerplatecompanies\\Controllers\\UsuariosempresaController' => __DIR__ . '/..' . '/julio101290/boilerplatecompanies/src/Controllers/UsuariosempresaController.php',
@@ -4118,6 +4153,10 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'julio101290\\boilerplateinventory\\Models\\InventoryDetailsModel' => __DIR__ . '/..' . '/julio101290/boilerplateinventory/src/Models/InventoryDetailsModel.php',
         'julio101290\\boilerplateinventory\\Models\\InventoryModel' => __DIR__ . '/..' . '/julio101290/boilerplateinventory/src/Models/InventoryModel.php',
         'julio101290\\boilerplateinventory\\Models\\SaldosModel' => __DIR__ . '/..' . '/julio101290/boilerplateinventory/src/Models/SaldosModel.php',
+        'julio101290\\boilerplatelocations\\Commands\\InstallCommandLocations' => __DIR__ . '/..' . '/julio101290/boilerplatelocations/src/Commands/InstallCommandLocations.php',
+        'julio101290\\boilerplatelocations\\Controllers\\UbicacionesController' => __DIR__ . '/..' . '/julio101290/boilerplatelocations/src/Controllers/UbicacionesController.php',
+        'julio101290\\boilerplatelocations\\Database\\Seeds\\BoilerplateLocations' => __DIR__ . '/..' . '/julio101290/boilerplatelocations/src/Database/Seeds/BoilerplateLocations.php',
+        'julio101290\\boilerplatelocations\\Models\\UbicacionesModel' => __DIR__ . '/..' . '/julio101290/boilerplatelocations/src/Models/UbicacionesModel.php',
         'julio101290\\boilerplatelog\\Commands\\InstallCommandLog' => __DIR__ . '/..' . '/julio101290/boilerplatelog/src/Commands/InstallCommandLog.php',
         'julio101290\\boilerplatelog\\Controllers\\LogController' => __DIR__ . '/..' . '/julio101290/boilerplatelog/src/Controllers/LogController.php',
         'julio101290\\boilerplatelog\\Database\\Seeds\\BoilerplateLog' => __DIR__ . '/..' . '/julio101290/boilerplatelog/src/Database/Seeds/BoilerplateLog.php',
@@ -4134,6 +4173,10 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'julio101290\\boilerplatequotes\\Database\\Seeds\\BoilerplateQuotes' => __DIR__ . '/..' . '/julio101290/boilerplatequotes/src/Database/Seeds/BoilerplateQuotes.php',
         'julio101290\\boilerplatequotes\\Models\\QuotesDetailsModel' => __DIR__ . '/..' . '/julio101290/boilerplatequotes/src/Models/QuotesDetailsModel.php',
         'julio101290\\boilerplatequotes\\Models\\QuotesModel' => __DIR__ . '/..' . '/julio101290/boilerplatequotes/src/Models/QuotesModel.php',
+        'julio101290\\boilerplateremolques\\Commands\\InstallCommandRemolques' => __DIR__ . '/..' . '/julio101290/boilerplateremolques/src/Commands/InstallCommandRemolques.php',
+        'julio101290\\boilerplateremolques\\Controllers\\RemolquesController' => __DIR__ . '/..' . '/julio101290/boilerplateremolques/src/Controllers/RemolquesController.php',
+        'julio101290\\boilerplateremolques\\Database\\Seeds\\BoilerplateRemolques' => __DIR__ . '/..' . '/julio101290/boilerplateremolques/src/Database/Seeds/BoilerplateRemolques.php',
+        'julio101290\\boilerplateremolques\\Models\\RemolquesModel' => __DIR__ . '/..' . '/julio101290/boilerplateremolques/src/Models/RemolquesModel.php',
         'julio101290\\boilerplatesells\\Controllers\\EnlacexmlController' => __DIR__ . '/..' . '/julio101290/boilerplatesells/src/Controllers/EnlacexmlController.php',
         'julio101290\\boilerplatesells\\Controllers\\FacturaElectronicaController' => __DIR__ . '/..' . '/julio101290/boilerplatesells/src/Controllers/FacturaElectronicaController.php',
         'julio101290\\boilerplatesells\\Controllers\\PDFLayoutSells' => __DIR__ . '/..' . '/julio101290/boilerplatesells/src/Controllers/PDFLayoutSells.php',
@@ -4191,10 +4234,10 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit657ac079313fab046eb8c29fe1d6992b::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit657ac079313fab046eb8c29fe1d6992b::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit657ac079313fab046eb8c29fe1d6992b::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit657ac079313fab046eb8c29fe1d6992b::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitd61c06d1401364c2c0d88657d69bf4ba::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitd61c06d1401364c2c0d88657d69bf4ba::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitd61c06d1401364c2c0d88657d69bf4ba::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitd61c06d1401364c2c0d88657d69bf4ba::$classMap;
 
         }, null, ClassLoader::class);
     }

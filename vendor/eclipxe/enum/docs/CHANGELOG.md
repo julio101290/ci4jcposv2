@@ -10,6 +10,99 @@ In summary, [SemVer](https://semver.org/) can be viewed as `[ Breaking ].[ Featu
 
 **Version `0.x.x` doesn't have to apply any of the SemVer rules**
 
+## Version 0.2.7 2025-03-29
+
+This is a compatibility release with PHP 8.4.
+Added nullable type indicator `?` when default parameter value is `null`.
+
+The license year has been updated.
+
+Maintenance changes:
+
+- On GitHub workflow, add PHP 8.4 to test matrix.
+- Update PSalm configuration to ignore false positives.
+
+This release include all previous unreleased entries.
+
+## UNRELEASED 2024-09-03
+
+This is a maintenance update:
+
+- Change `preg_match_all` validation at `EntriesPopulator::resolveNamesFromDocComment()` to satisfy code analysis.
+- Update development tools.
+
+## UNRELEASED 2024-03-18
+
+This is a maintenance update:
+
+- Update documentation about PHP Native enums.
+- Update license year.
+- Update coding standards.
+- Fix GitHub workflow:
+  - Add PHP 8.3 to test matrix.
+  - Run jobs using PHP 8.3.
+  - Use GitHub actions version 4.
+  - Show PSalm version before run.
+  - Allow dispatch workflows manually.
+- Update development tools.
+
+## UNRELEASED 2023-05-24
+
+This is a maintenance update:
+
+- Fix false positive PHPStan issue.
+- Update license year.
+- Fix badge build on `README.md`.
+- Fix GitHub workflow:
+  - Run tools on PHP 8.2.
+  - Refactor infection job to run on PHP 8.2.
+  - Replace `::set-output` with `$GITHUB_OUTPUT`.
+  - Remove composer tool when is not required.
+- Fix Scrutinizer CI to run on PHP 8.2.
+- Update `php-cs-fixer` configuration:
+  - Fix `no_trailing_comma_in_singleline`.
+  - Add `fully_qualified_strict_types`.
+  - Add `trailing_comma_in_multiline`. 
+- Update development tools.
+
+## UNRELEASED 2022-07-18
+
+This is a maintenance update:
+
+- Fixed CI. Add configuration for `infection/extension-installer` (deny).
+- Add ordered imports to `php-cs-fixer` configuration.
+- Update development tools.
+- Fix Scrutinizer CI to run on PHP 7.4.
+
+## UNRELEASED 2022-02-28
+
+This is a maintenance update:
+
+- Fixed CI. Remove Psalm deprecated attribute `totallyTyped`.
+- On GitHub workflow for CI, split steps into jobs.
+- Update code style rules.
+- Add PHP Version badge on README.
+
+## UNRELEASED 2022-02-06
+
+Update license year. Happy 2022!
+
+Fixed CI. PHPStan was failing because missing types declaration on `EntriesPopulatorTest`.
+
+Add PHP 8.1 to test matrix on build.
+
+Migrate from `develop/install-development-tools` to `phive`.
+
+Run test coverage on Scrutinizer CI.
+
+## UNRELEASED 2021-09-25
+
+Fixed CI. Infection fails because it is not working on PHP 7.4.
+PHPUnit cannot create code coverage for infection on PHP 8.0; so, upgrade to PHP 8.0 is not a solution.
+Install and run Infection throught Composer is the right workaround.
+
+Improve wording and typos on `README` and `CONTRIBUTING`.
+
 ## Version 0.2.6 2020-06-17
 
 There are no significant code changes, only some refactoring to improve testing and type understanding.

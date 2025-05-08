@@ -131,6 +131,8 @@ class ProveedoresController extends BaseController {
         $userName = user()->username;
         $idUser = user()->id;
         $datos = $this->request->getPost();
+        $datos["birthdate"] = fechaMySQLDateTimeHTML5($datos["birthdate"]); 
+        
         if ($datos["idProveedor"] == 0) {
             try {
                 if ($this->proveedores->save($datos) === false) {

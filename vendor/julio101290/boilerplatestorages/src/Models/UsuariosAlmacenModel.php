@@ -4,50 +4,89 @@ namespace julio101290\boilerplatestorages\Models;
 
 use CodeIgniter\Model;
 
-class UsuariosAlmacenModel extends Model
-{
-    protected $table      = 'usuarios_almacen';
+class UsuariosAlmacenModel extends Model {
+
+    protected $table = 'usuarios_almacen';
     protected $primaryKey = 'id';
     protected $useAutoIncrement = true;
-    protected $returnType     = 'array';
+    protected $returnType = 'array';
     protected $useSoftDeletes = true;
     protected $allowedFields = ['id', 'idEmpresa', 'idStorage', 'idUsuario', 'status', 'created_at', 'updated_at', 'deleted_at'];
     protected $useTimestamps = true;
-    protected $createdField  = 'created_at';
-    protected $deletedField  = 'deleted_at';
-    protected $validationRules    =  [];
+    protected $createdField = 'created_at';
+    protected $deletedField = 'deleted_at';
+    protected $validationRules = [];
     protected $validationMessages = [];
-    protected $skipValidation     = false;
+    protected $skipValidation = false;
 
+    public function mdlAlmacenesPorUsuario($almacen, $empresasID, $idEmpresa) {
 
-    public function mdlAlmacenesPorUsuario($almacen, $empresasID)
-    {
+        $db = \Config\Database::connect();
+        
+        if ($db->DBDriver === 'pgsql' || $db->DBDriver === 'PDO\Postgres' || $db->DBDriver === 'Postgre') {
+            $result = $this->db->table('users a')
+                    ->select(
+                            'COALESCE(a.id, 0) AS id,
+                            a.username as username,
+                            b.idEmpresa AS idEmpresa,
+                            ' . (int) $almacen . ' AS idStorage,
 
-        $result = $this->db->table('users a, usuariosempresa b')
-            ->select(
-                'ifnull(a.id,0) as id
-                ,a.username
-                ,b.idEmpresa
-                ,' . $almacen . ' as idStorage
-                ,ifnull((select status 
-                            from usuarios_almacen z
-                            where z.idUsuario = a.id
-                                and b.idEmpresa=b.id
-                                    and z.idStorage=' . $almacen . '
-                                    ),\'off\') as status
-                                        
-                ,ifnull((select id 
-                        from usuarios_almacen z
-                        where z.idUsuario = a.id
-                            and b.idEmpresa=b.id
-                                and z.idStorage=' . $almacen . '
-                                ),0) as idAlmacenUsuario
-                '
+                            COALESCE((
+                                SELECT z.status
+                                FROM usuarios_almacen z
+                                WHERE "z"."idUsuario" = a.id
+                                  AND "z"."idStorage" = ' . (int) $almacen . '
+                                 
+                                  AND "b"."idEmpresa" = ' . (int) $idEmpresa . '
+                                LIMIT 1
+                            ), \'off\') AS status,
 
-            )
+                            COALESCE((
+                                SELECT z.id
+                                FROM usuarios_almacen z
+                                WHERE "z"."idUsuario" = a.id
+                                  AND "z"."idStorage" = ' . (int) $almacen . '
+                               
+                                  AND "b"."idEmpresa" = ' . (int) $idEmpresa . '
+                                LIMIT 1
+                            ), 0) AS idalmacenusuario '
+                    )
+                    ->join('usuariosempresa b', 'a.id = b.idUsuario')
+                    ->whereIn('b.id', $empresasID)
+                    ->where("idEmpresa", $idEmpresa);
+        } else {
 
-            ->where('a.id', 'b.idUsuario', FALSE)
-            ->wherein('b.id', $empresasID);
+            $result = $this->db->table('users a')
+                    ->select(
+                            'COALESCE(a.id, 0) AS id,
+                            a.username as username,
+                            b.idEmpresa AS idEmpresa,
+                            ' . (int) $almacen . ' AS idStorage,
+
+                            COALESCE((
+                                SELECT z.status
+                                FROM usuarios_almacen z
+                                WHERE z.idUsuario = a.id
+                                  AND z.idStorage = ' . (int) $almacen . '
+                                  
+                                  AND b.idEmpresa = ' . (int) $idEmpresa . '
+                                LIMIT 1
+                            ), \'off\') AS status,
+
+                            COALESCE((
+                                SELECT z.id
+                                FROM usuarios_almacen z
+                                WHERE z.idUsuario = a.id
+                                  AND z.idStorage = ' . (int) $almacen . '
+                                  
+                                  AND b.idEmpresa = ' . (int) $idEmpresa . '
+                                LIMIT 1
+                            ), 0) AS idalmacenusuario '
+                    )
+                    ->join('usuariosempresa b', 'a.id = b.idUsuario')
+                    ->whereIn('b.id', $empresasID)
+                    ->where("idEmpresa", $idEmpresa);
+        }
 
         return $result;
     }

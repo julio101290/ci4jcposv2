@@ -78,6 +78,8 @@
                                     <span class="input-group-text"><i class="fas fa-pencil-alt"></i></span>
                                 </div>
                                 <select type="text" name="brachoffice" id="brachoffice" class="form-control <?= session('error.brachoffice') ? 'is-invalid' : '' ?>" value="<?= old('brachoffice') ?>" placeholder="<?= lang('storages.fields.brachoffice') ?>" autocomplete="off">
+                                    
+                                    <option value="0" selected=""> Select brachoffice  </office>
                                     <?php
                                     foreach ($sucursales as $key => $value) {
 
@@ -186,6 +188,11 @@
         $(".form-control").val("");
 
         $("#idStorages").val("0");
+        $("#brachoffice").val("0");
+        $("#exist").val("0");
+        $("#list").val("0");
+        $("#costCenter").val("0");
+        $("#main").val("main");
 
         $("#btnSaveStorages").removeAttr("disabled");
 

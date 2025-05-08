@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b4fab57069438e57edbb463488458667",
+    "content-hash": "cb8e0113740e0e58d2421fdc3ff927b6",
     "packages": [
         {
             "name": "brick/math",
-            "version": "0.12.1",
+            "version": "0.12.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brick/math.git",
-                "reference": "f510c0a40911935b77b86859eb5223d58d660df1"
+                "reference": "866551da34e9a618e64a819ee1e01c20d8a588ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/math/zipball/f510c0a40911935b77b86859eb5223d58d660df1",
-                "reference": "f510c0a40911935b77b86859eb5223d58d660df1",
+                "url": "https://api.github.com/repos/brick/math/zipball/866551da34e9a618e64a819ee1e01c20d8a588ba",
+                "reference": "866551da34e9a618e64a819ee1e01c20d8a588ba",
                 "shasum": ""
             },
             "require": {
@@ -26,7 +26,7 @@
             "require-dev": {
                 "php-coveralls/php-coveralls": "^2.2",
                 "phpunit/phpunit": "^10.1",
-                "vimeo/psalm": "5.16.0"
+                "vimeo/psalm": "6.8.8"
             },
             "type": "library",
             "autoload": {
@@ -56,7 +56,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brick/math/issues",
-                "source": "https://github.com/brick/math/tree/0.12.1"
+                "source": "https://github.com/brick/math/tree/0.12.3"
             },
             "funding": [
                 {
@@ -64,20 +64,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-29T23:19:16+00:00"
+            "time": "2025-02-28T13:11:00+00:00"
         },
         {
             "name": "codeigniter4/framework",
-            "version": "v4.6.0",
+            "version": "v4.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/codeigniter4/framework.git",
-                "reference": "96a1e603b9a0f022b0febb2e249eab6971a7e0d5"
+                "reference": "d021b04fdf23afc85d8a8b9b541be9a0a9ccdb5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codeigniter4/framework/zipball/96a1e603b9a0f022b0febb2e249eab6971a7e0d5",
-                "reference": "96a1e603b9a0f022b0febb2e249eab6971a7e0d5",
+                "url": "https://api.github.com/repos/codeigniter4/framework/zipball/d021b04fdf23afc85d8a8b9b541be9a0a9ccdb5f",
+                "reference": "d021b04fdf23afc85d8a8b9b541be9a0a9ccdb5f",
                 "shasum": ""
             },
             "require": {
@@ -138,20 +138,20 @@
                 "slack": "https://codeigniterchat.slack.com",
                 "source": "https://github.com/codeigniter4/CodeIgniter4"
             },
-            "time": "2025-01-19T18:31:34+00:00"
+            "time": "2025-05-02T16:00:55+00:00"
         },
         {
             "name": "codeigniter4/translations",
-            "version": "v4.5.4",
+            "version": "v4.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/codeigniter4/translations.git",
-                "reference": "8bc9c0736aed747abbbb29d718ddf0696d1bb396"
+                "reference": "08ec6c93e4645fc24ce56ddec353439e44f2aa0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codeigniter4/translations/zipball/8bc9c0736aed747abbbb29d718ddf0696d1bb396",
-                "reference": "8bc9c0736aed747abbbb29d718ddf0696d1bb396",
+                "url": "https://api.github.com/repos/codeigniter4/translations/zipball/08ec6c93e4645fc24ce56ddec353439e44f2aa0a",
+                "reference": "08ec6c93e4645fc24ce56ddec353439e44f2aa0a",
                 "shasum": ""
             },
             "require": {
@@ -189,20 +189,20 @@
                 "slack": "https://codeigniterchat.slack.com",
                 "source": "https://github.com/codeigniter4/translations"
             },
-            "time": "2024-11-15T15:50:13+00:00"
+            "time": "2025-05-02T16:37:42+00:00"
         },
         {
             "name": "eclipxe/cfdiutils",
-            "version": "v2.29.0",
+            "version": "v2.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/eclipxe13/CfdiUtils.git",
-                "reference": "c3a74661ec94f72be4531d1cc8c4b200df0f964e"
+                "reference": "f9f77b8d339065ac3680b62fae80be3086920719"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eclipxe13/CfdiUtils/zipball/c3a74661ec94f72be4531d1cc8c4b200df0f964e",
-                "reference": "c3a74661ec94f72be4531d1cc8c4b200df0f964e",
+                "url": "https://api.github.com/repos/eclipxe13/CfdiUtils/zipball/f9f77b8d339065ac3680b62fae80be3086920719",
+                "reference": "f9f77b8d339065ac3680b62fae80be3086920719",
                 "shasum": ""
             },
             "require": {
@@ -216,8 +216,8 @@
                 "ext-openssl": "*",
                 "ext-simplexml": "*",
                 "ext-xsl": "*",
-                "php": ">=7.3",
-                "symfony/process": "^3.4|^4.2|^5.0|^6.0|^7.0"
+                "php": ">=7.3 <8.4",
+                "symfony/process": "^5.4.47|^6.4.15|^7.1.8"
             },
             "require-dev": {
                 "ext-bcmath": "*",
@@ -225,7 +225,7 @@
                 "ext-soap": "*",
                 "friendsofphp/php-cs-fixer": "^3.0",
                 "genkgo/xsl": "^1.0.8",
-                "phpstan/phpstan": "^1.5",
+                "phpstan/phpstan": "^2.1",
                 "phpunit/phpunit": "^9.5",
                 "squizlabs/php_codesniffer": "^3.6"
             },
@@ -266,20 +266,20 @@
                 "issues": "https://github.com/eclipxe13/CfdiUtils/issues",
                 "source": "https://github.com/eclipxe13/CfdiUtils"
             },
-            "time": "2024-06-18T22:49:25+00:00"
+            "time": "2025-02-19T19:10:39+00:00"
         },
         {
             "name": "eclipxe/enum",
-            "version": "v0.2.6",
+            "version": "v0.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/eclipxe13/enum.git",
-                "reference": "860e2592c2c9bcfa522c62d9cf3f3559014f8d28"
+                "reference": "72ee412a418f3e60212d9dfc2e93a791d215dbf6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eclipxe13/enum/zipball/860e2592c2c9bcfa522c62d9cf3f3559014f8d28",
-                "reference": "860e2592c2c9bcfa522c62d9cf3f3559014f8d28",
+                "url": "https://api.github.com/repos/eclipxe13/enum/zipball/72ee412a418f3e60212d9dfc2e93a791d215dbf6",
+                "reference": "72ee412a418f3e60212d9dfc2e93a791d215dbf6",
                 "shasum": ""
             },
             "require": {
@@ -315,7 +315,7 @@
                 "issues": "https://github.com/eclipxe13/enum/issues",
                 "source": "https://github.com/eclipxe13/enum"
             },
-            "time": "2021-06-18T02:12:56+00:00"
+            "time": "2025-03-30T06:46:19+00:00"
         },
         {
             "name": "eclipxe/xmlresourceretriever",
@@ -372,16 +372,16 @@
         },
         {
             "name": "eclipxe/xmlschemavalidator",
-            "version": "v3.0.4",
+            "version": "v3.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/eclipxe13/XmlSchemaValidator.git",
-                "reference": "77ae78bf987d61ffb0e44c427bc3523874b70380"
+                "reference": "e497f25affb999759af22ea136a039881c2d22b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eclipxe13/XmlSchemaValidator/zipball/77ae78bf987d61ffb0e44c427bc3523874b70380",
-                "reference": "77ae78bf987d61ffb0e44c427bc3523874b70380",
+                "url": "https://api.github.com/repos/eclipxe13/XmlSchemaValidator/zipball/e497f25affb999759af22ea136a039881c2d22b1",
+                "reference": "e497f25affb999759af22ea136a039881c2d22b1",
                 "shasum": ""
             },
             "require": {
@@ -421,7 +421,7 @@
                 "issues": "https://github.com/eclipxe13/XmlSchemaValidator/issues",
                 "source": "https://github.com/eclipxe13/XmlSchemaValidator"
             },
-            "time": "2024-03-09T01:15:32+00:00"
+            "time": "2025-02-18T16:53:48+00:00"
         },
         {
             "name": "greenlion/php-sql-parser",
@@ -485,16 +485,16 @@
         },
         {
             "name": "hermawan/codeigniter4-datatables",
-            "version": "v0.7.2",
+            "version": "v0.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hermawanramadhan/CodeIgniter4-DataTables.git",
-                "reference": "54057bf0facc171f4be0c490a257dfa46eb7e0d9"
+                "reference": "cdd5c2b1f939528b4825d394db157396e8848a1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hermawanramadhan/CodeIgniter4-DataTables/zipball/54057bf0facc171f4be0c490a257dfa46eb7e0d9",
-                "reference": "54057bf0facc171f4be0c490a257dfa46eb7e0d9",
+                "url": "https://api.github.com/repos/hermawanramadhan/CodeIgniter4-DataTables/zipball/cdd5c2b1f939528b4825d394db157396e8848a1f",
+                "reference": "cdd5c2b1f939528b4825d394db157396e8848a1f",
                 "shasum": ""
             },
             "require": {
@@ -521,9 +521,9 @@
             "description": "Serverside Datatables library for CodeIgniter4",
             "support": {
                 "issues": "https://github.com/hermawanramadhan/CodeIgniter4-DataTables/issues",
-                "source": "https://github.com/hermawanramadhan/CodeIgniter4-DataTables/tree/v0.7.2"
+                "source": "https://github.com/hermawanramadhan/CodeIgniter4-DataTables/tree/v0.8.0"
             },
-            "time": "2024-04-27T07:44:11+00:00"
+            "time": "2025-01-09T02:06:46+00:00"
         },
         {
             "name": "julio101290/auth",
@@ -673,16 +673,16 @@
         },
         {
             "name": "julio101290/boilerplate",
-            "version": "v1.4.2",
+            "version": "v1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplate.git",
-                "reference": "da322143c9cfac96b99ee43f80e1adb7f56cc637"
+                "reference": "66759cb6b5880821d66752c3b09ed6952779cc7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplate/zipball/da322143c9cfac96b99ee43f80e1adb7f56cc637",
-                "reference": "da322143c9cfac96b99ee43f80e1adb7f56cc637",
+                "url": "https://api.github.com/repos/julio101290/boilerplate/zipball/66759cb6b5880821d66752c3b09ed6952779cc7d",
+                "reference": "66759cb6b5880821d66752c3b09ed6952779cc7d",
                 "shasum": ""
             },
             "require": {
@@ -719,7 +719,7 @@
                 "codeigniter4"
             ],
             "support": {
-                "source": "https://github.com/julio101290/boilerplate/tree/v1.4.2"
+                "source": "https://github.com/julio101290/boilerplate/tree/v1.4.3"
             },
             "funding": [
                 {
@@ -735,7 +735,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2025-01-15T23:15:30+00:00"
+            "time": "2025-05-06T17:38:10+00:00"
         },
         {
             "name": "julio101290/boilerplatebranchoffice",
@@ -796,6 +796,75 @@
                 "source": "https://github.com/julio101290/boilerplatebranchoffice/tree/v0.0.1"
             },
             "time": "2024-11-29T16:52:35+00:00"
+        },
+        {
+            "name": "julio101290/boilerplatecartaporte",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/julio101290/boilerplateCartaPorte.git",
+                "reference": "43da76ee960f5cc32b5c8d3c6588fe12789b60e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/julio101290/boilerplateCartaPorte/zipball/43da76ee960f5cc32b5c8d3c6588fe12789b60e6",
+                "reference": "43da76ee960f5cc32b5c8d3c6588fe12789b60e6",
+                "shasum": ""
+            },
+            "require": {
+                "codeigniter4/framework": "^4.1",
+                "codeigniter4/translations": "^4.0",
+                "julio101290/auth": "^1.0",
+                "julio101290/boilerplate": "^1.0",
+                "julio101290/boilerplatecustumers": "^1.0.0",
+                "julio101290/boilerplateinventory": "^1.0.0",
+                "julio101290/boilerplatelog": "^1.0.0",
+                "julio101290/boilerplatestorages": "^1.0.0",
+                "julio101290/boilerplatesuppliers": "^1.0.0",
+                "julio101290/boilerplatetypesmovement": "^1.0.0",
+                "php": "^7.3 || ^8.0",
+                "phpcfdi/sat-catalogos": "^0.3.1"
+            },
+            "require-dev": {
+                "fakerphp/faker": "^1.13",
+                "phpunit/phpunit": "^9.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "julio101290\\boilerplatecartaporte\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "julio101920",
+                    "email": "juliocesar101290@hotmail.com"
+                }
+            ],
+            "description": "library to generate carta porte complement CFDI 4.0",
+            "keywords": [
+                "Carta Porte",
+                "authorization",
+                "backup",
+                "boilerplate",
+                "codeigniter4",
+                "companies",
+                "crud",
+                "invoice",
+                "mysql",
+                "payments",
+                "quotes"
+            ],
+            "support": {
+                "issues": "https://github.com/julio101290/boilerplateCartaPorte/issues",
+                "source": "https://github.com/julio101290/boilerplateCartaPorte/tree/main"
+            },
+            "time": "2025-03-25T23:23:49+00:00"
         },
         {
             "name": "julio101290/boilerplatecashtonnage",
@@ -998,16 +1067,16 @@
         },
         {
             "name": "julio101290/boilerplatecompanies",
-            "version": "v1.3.4",
+            "version": "v1.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplateCompanies.git",
-                "reference": "570336c27f4dca0b08ea764cdb710173a1804f8b"
+                "reference": "5039bf5de3fa278392e3ad694535441700a91350"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplateCompanies/zipball/570336c27f4dca0b08ea764cdb710173a1804f8b",
-                "reference": "570336c27f4dca0b08ea764cdb710173a1804f8b",
+                "url": "https://api.github.com/repos/julio101290/boilerplateCompanies/zipball/5039bf5de3fa278392e3ad694535441700a91350",
+                "reference": "5039bf5de3fa278392e3ad694535441700a91350",
                 "shasum": ""
             },
             "require": {
@@ -1052,7 +1121,7 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplateCompanies/issues",
-                "source": "https://github.com/julio101290/boilerplateCompanies/tree/v1.3.4"
+                "source": "https://github.com/julio101290/boilerplateCompanies/tree/v1.3.5"
             },
             "funding": [
                 {
@@ -1068,7 +1137,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2025-01-15T16:56:11+00:00"
+            "time": "2025-05-03T19:12:58+00:00"
         },
         {
             "name": "julio101290/boilerplatecomplementopago",
@@ -1199,16 +1268,16 @@
         },
         {
             "name": "julio101290/boilerplatecustumers",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplatecustumers.git",
-                "reference": "8ba6bdfec39e6893d02ab2e0bed7885e8610f0e5"
+                "reference": "78ae529a7da1878ad4273b914ec75b11402a7b5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplatecustumers/zipball/8ba6bdfec39e6893d02ab2e0bed7885e8610f0e5",
-                "reference": "8ba6bdfec39e6893d02ab2e0bed7885e8610f0e5",
+                "url": "https://api.github.com/repos/julio101290/boilerplatecustumers/zipball/78ae529a7da1878ad4273b914ec75b11402a7b5e",
+                "reference": "78ae529a7da1878ad4273b914ec75b11402a7b5e",
                 "shasum": ""
             },
             "require": {
@@ -1254,9 +1323,9 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplatecustumers/issues",
-                "source": "https://github.com/julio101290/boilerplatecustumers/tree/v1.0.0"
+                "source": "https://github.com/julio101290/boilerplatecustumers/tree/v1.0.1"
             },
-            "time": "2024-12-02T23:49:26+00:00"
+            "time": "2025-05-06T18:18:53+00:00"
         },
         {
             "name": "julio101290/boilerplatedrivers",
@@ -1382,17 +1451,86 @@
             "time": "2024-12-11T23:56:58+00:00"
         },
         {
-            "name": "julio101290/boilerplatelog",
-            "version": "v1.0.3",
+            "name": "julio101290/boilerplatelocations",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/julio101290/boilerplatelog.git",
-                "reference": "8fb126f81aed13b68d3761df9ab67a8c2a7d4e67"
+                "url": "https://github.com/julio101290/boilerplateLocations.git",
+                "reference": "f9b3b069a3a374728d8a299eb133763b73fa4466"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplatelog/zipball/8fb126f81aed13b68d3761df9ab67a8c2a7d4e67",
-                "reference": "8fb126f81aed13b68d3761df9ab67a8c2a7d4e67",
+                "url": "https://api.github.com/repos/julio101290/boilerplateLocations/zipball/f9b3b069a3a374728d8a299eb133763b73fa4466",
+                "reference": "f9b3b069a3a374728d8a299eb133763b73fa4466",
+                "shasum": ""
+            },
+            "require": {
+                "codeigniter4/framework": "^4.1",
+                "codeigniter4/translations": "^4.0",
+                "julio101290/auth": "^1.0",
+                "julio101290/boilerplate": "^1.0",
+                "julio101290/boilerplatecustumers": "^1.0.0",
+                "julio101290/boilerplateinventory": "^1.0.0",
+                "julio101290/boilerplatelog": "^1.0.0",
+                "julio101290/boilerplatestorages": "^1.0.0",
+                "julio101290/boilerplatesuppliers": "^1.0.0",
+                "julio101290/boilerplatetypesmovement": "^1.0.0",
+                "php": "^7.3 || ^8.0",
+                "phpcfdi/sat-catalogos": "^0.3.1"
+            },
+            "require-dev": {
+                "fakerphp/faker": "^1.13",
+                "phpunit/phpunit": "^9.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "julio101290\\boilerplatelocations\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "julio101920",
+                    "email": "juliocesar101290@hotmail.com"
+                }
+            ],
+            "description": "library to locations, required for port letter Carta Porte",
+            "keywords": [
+                "Carta Porte",
+                "authorization",
+                "backup",
+                "boilerplate",
+                "cfdi",
+                "codeigniter4",
+                "companies",
+                "crud",
+                "invoice",
+                "mysql",
+                "payments",
+                "quotes"
+            ],
+            "support": {
+                "issues": "https://github.com/julio101290/boilerplateLocations/issues",
+                "source": "https://github.com/julio101290/boilerplateLocations/tree/v1.0.0"
+            },
+            "time": "2025-02-05T23:31:56+00:00"
+        },
+        {
+            "name": "julio101290/boilerplatelog",
+            "version": "v1.04",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/julio101290/boilerplatelog.git",
+                "reference": "0443426b830cb41c1b51e033f7ea88a947e90fbf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/julio101290/boilerplatelog/zipball/0443426b830cb41c1b51e033f7ea88a947e90fbf",
+                "reference": "0443426b830cb41c1b51e033f7ea88a947e90fbf",
                 "shasum": ""
             },
             "require": {
@@ -1431,22 +1569,22 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplatelog/issues",
-                "source": "https://github.com/julio101290/boilerplatelog/tree/v1.0.3"
+                "source": "https://github.com/julio101290/boilerplatelog/tree/v1.04"
             },
-            "time": "2024-12-18T19:14:58+00:00"
+            "time": "2025-05-03T19:05:57+00:00"
         },
         {
             "name": "julio101290/boilerplateproducts",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplateproducts.git",
-                "reference": "26a821cc004047ed88745268d7348206a11a071d"
+                "reference": "3b247744bc0ebc6c3333e0d950a5180404d3e7a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplateproducts/zipball/26a821cc004047ed88745268d7348206a11a071d",
-                "reference": "26a821cc004047ed88745268d7348206a11a071d",
+                "url": "https://api.github.com/repos/julio101290/boilerplateproducts/zipball/3b247744bc0ebc6c3333e0d950a5180404d3e7a5",
+                "reference": "3b247744bc0ebc6c3333e0d950a5180404d3e7a5",
                 "shasum": ""
             },
             "require": {
@@ -1492,9 +1630,9 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplateproducts/issues",
-                "source": "https://github.com/julio101290/boilerplateproducts/tree/v1.0.3"
+                "source": "https://github.com/julio101290/boilerplateproducts/tree/v1.0.4"
             },
-            "time": "2025-01-25T00:31:35+00:00"
+            "time": "2025-05-05T19:29:45+00:00"
         },
         {
             "name": "julio101290/boilerplatequotes",
@@ -1562,17 +1700,86 @@
             "time": "2025-02-11T04:33:07+00:00"
         },
         {
-            "name": "julio101290/boilerplatesells",
-            "version": "v1.0.3",
+            "name": "julio101290/boilerplateremolques",
+            "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/julio101290/boilerplateSells.git",
-                "reference": "3e7f0736cf71e1a2f0e465f1c269d093a421cf06"
+                "url": "https://github.com/julio101290/boilerplateRemolques.git",
+                "reference": "59050b266a36183075f939d90f2f486605f41531"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplateSells/zipball/3e7f0736cf71e1a2f0e465f1c269d093a421cf06",
-                "reference": "3e7f0736cf71e1a2f0e465f1c269d093a421cf06",
+                "url": "https://api.github.com/repos/julio101290/boilerplateRemolques/zipball/59050b266a36183075f939d90f2f486605f41531",
+                "reference": "59050b266a36183075f939d90f2f486605f41531",
+                "shasum": ""
+            },
+            "require": {
+                "codeigniter4/framework": "^4.1",
+                "codeigniter4/translations": "^4.0",
+                "julio101290/auth": "^1.0",
+                "julio101290/boilerplate": "^1.0",
+                "julio101290/boilerplatecustumers": "^1.0.0",
+                "julio101290/boilerplateinventory": "^1.0.0",
+                "julio101290/boilerplatelog": "^1.0.0",
+                "julio101290/boilerplatestorages": "^1.0.0",
+                "julio101290/boilerplatesuppliers": "^1.0.0",
+                "julio101290/boilerplatetypesmovement": "^1.0.0",
+                "php": "^7.3 || ^8.0",
+                "phpcfdi/sat-catalogos": "^0.3.1"
+            },
+            "require-dev": {
+                "fakerphp/faker": "^1.13",
+                "phpunit/phpunit": "^9.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "julio101290\\boilerplateremolques\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "julio101920",
+                    "email": "juliocesar101290@hotmail.com"
+                }
+            ],
+            "description": "library to trailers , required for port letter Carta Porte",
+            "keywords": [
+                "Carta Porte",
+                "Remolques",
+                "authorization",
+                "boilerplate",
+                "cfdi",
+                "codeigniter4",
+                "crud",
+                "invoice",
+                "mysql",
+                "quotes",
+                "trailers"
+            ],
+            "support": {
+                "issues": "https://github.com/julio101290/boilerplateRemolques/issues",
+                "source": "https://github.com/julio101290/boilerplateRemolques/tree/main"
+            },
+            "time": "2025-02-07T00:14:09+00:00"
+        },
+        {
+            "name": "julio101290/boilerplatesells",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/julio101290/boilerplateSells.git",
+                "reference": "2643965cc76c628d5a1c20cb29273ee03fcaad77"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/julio101290/boilerplateSells/zipball/2643965cc76c628d5a1c20cb29273ee03fcaad77",
+                "reference": "2643965cc76c628d5a1c20cb29273ee03fcaad77",
                 "shasum": ""
             },
             "require": {
@@ -1623,9 +1830,9 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplateSells/issues",
-                "source": "https://github.com/julio101290/boilerplateSells/tree/v1.0.3"
+                "source": "https://github.com/julio101290/boilerplateSells/tree/v1.0.5"
             },
-            "time": "2025-01-29T17:44:11+00:00"
+            "time": "2025-03-25T18:27:34+00:00"
         },
         {
             "name": "julio101290/boilerplatesettings",
@@ -1697,16 +1904,16 @@
         },
         {
             "name": "julio101290/boilerplatestorages",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplateStorages.git",
-                "reference": "c63616918a819a485de9546bfd3e567799a856fb"
+                "reference": "f71162c2b5f0990c30888eb01f63340dd84c6f99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplateStorages/zipball/c63616918a819a485de9546bfd3e567799a856fb",
-                "reference": "c63616918a819a485de9546bfd3e567799a856fb",
+                "url": "https://api.github.com/repos/julio101290/boilerplateStorages/zipball/f71162c2b5f0990c30888eb01f63340dd84c6f99",
+                "reference": "f71162c2b5f0990c30888eb01f63340dd84c6f99",
                 "shasum": ""
             },
             "require": {
@@ -1751,22 +1958,22 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplateStorages/issues",
-                "source": "https://github.com/julio101290/boilerplateStorages/tree/v1.0.0"
+                "source": "https://github.com/julio101290/boilerplateStorages/tree/v1.0.1"
             },
-            "time": "2024-12-03T23:38:43+00:00"
+            "time": "2025-05-06T16:17:59+00:00"
         },
         {
             "name": "julio101290/boilerplatesuppliers",
-            "version": "v1.0.2",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplateSuppliers.git",
-                "reference": "5052a351712d6aa19ccbe76f3748adf9bfa03d1b"
+                "reference": "7489ef10982747384ea9caf191d472d5a64226bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplateSuppliers/zipball/5052a351712d6aa19ccbe76f3748adf9bfa03d1b",
-                "reference": "5052a351712d6aa19ccbe76f3748adf9bfa03d1b",
+                "url": "https://api.github.com/repos/julio101290/boilerplateSuppliers/zipball/7489ef10982747384ea9caf191d472d5a64226bb",
+                "reference": "7489ef10982747384ea9caf191d472d5a64226bb",
                 "shasum": ""
             },
             "require": {
@@ -1811,22 +2018,22 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplateSuppliers/issues",
-                "source": "https://github.com/julio101290/boilerplateSuppliers/tree/v1.0.2"
+                "source": "https://github.com/julio101290/boilerplateSuppliers/tree/v1.0.3"
             },
-            "time": "2024-12-14T16:53:52+00:00"
+            "time": "2025-05-06T17:45:00+00:00"
         },
         {
             "name": "julio101290/boilerplatetypesmovement",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplateTypesOfMovement.git",
-                "reference": "0956aa3c555e11c2577d1fb947e6e75f83ac18d3"
+                "reference": "7759a246de71336239d916723acdf71cdcd94ff8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplateTypesOfMovement/zipball/0956aa3c555e11c2577d1fb947e6e75f83ac18d3",
-                "reference": "0956aa3c555e11c2577d1fb947e6e75f83ac18d3",
+                "url": "https://api.github.com/repos/julio101290/boilerplateTypesOfMovement/zipball/7759a246de71336239d916723acdf71cdcd94ff8",
+                "reference": "7759a246de71336239d916723acdf71cdcd94ff8",
                 "shasum": ""
             },
             "require": {
@@ -1871,9 +2078,9 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplateTypesOfMovement/issues",
-                "source": "https://github.com/julio101290/boilerplateTypesOfMovement/tree/v1.0.0"
+                "source": "https://github.com/julio101290/boilerplateTypesOfMovement/tree/v1.0.1"
             },
-            "time": "2024-12-07T16:06:53+00:00"
+            "time": "2025-05-06T18:00:36+00:00"
         },
         {
             "name": "julio101290/boilerplatevehicles",
@@ -1991,16 +2198,16 @@
         },
         {
             "name": "laminas/laminas-escaper",
-            "version": "2.15.0",
+            "version": "2.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-escaper.git",
-                "reference": "c612b0488ae486284c39885efca494c180f16351"
+                "reference": "df1ef9503299a8e3920079a16263b578eaf7c3ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-escaper/zipball/c612b0488ae486284c39885efca494c180f16351",
-                "reference": "c612b0488ae486284c39885efca494c180f16351",
+                "url": "https://api.github.com/repos/laminas/laminas-escaper/zipball/df1ef9503299a8e3920079a16263b578eaf7c3ba",
+                "reference": "df1ef9503299a8e3920079a16263b578eaf7c3ba",
                 "shasum": ""
             },
             "require": {
@@ -2012,12 +2219,11 @@
                 "zendframework/zend-escaper": "*"
             },
             "require-dev": {
-                "infection/infection": "^0.27.11",
+                "infection/infection": "^0.29.8",
                 "laminas/laminas-coding-standard": "~3.0.1",
-                "maglnet/composer-require-checker": "^3.8.0",
-                "phpunit/phpunit": "^9.6.22",
-                "psalm/plugin-phpunit": "^0.19.0",
-                "vimeo/psalm": "^5.26.1"
+                "phpunit/phpunit": "^10.5.45",
+                "psalm/plugin-phpunit": "^0.19.2",
+                "vimeo/psalm": "^6.6.2"
             },
             "type": "library",
             "autoload": {
@@ -2049,7 +2255,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2024-12-17T19:39:54+00:00"
+            "time": "2025-05-06T19:29:36+00:00"
         },
         {
             "name": "league/plates",
@@ -2350,27 +2556,27 @@
         },
         {
             "name": "phpcfdi/credentials",
-            "version": "v1.2.2",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpcfdi/credentials.git",
-                "reference": "1a8c0a00b717eb7bc84c42dee378a5dd1e83774c"
+                "reference": "2307eb2ae8a968b0e8b78d9710aa7544a5642aea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpcfdi/credentials/zipball/1a8c0a00b717eb7bc84c42dee378a5dd1e83774c",
-                "reference": "1a8c0a00b717eb7bc84c42dee378a5dd1e83774c",
+                "url": "https://api.github.com/repos/phpcfdi/credentials/zipball/2307eb2ae8a968b0e8b78d9710aa7544a5642aea",
+                "reference": "2307eb2ae8a968b0e8b78d9710aa7544a5642aea",
                 "shasum": ""
             },
             "require": {
-                "eclipxe/enum": "^0.2.0",
+                "eclipxe/enum": "^0.2.7",
                 "ext-mbstring": "*",
                 "ext-openssl": "*",
-                "php": ">=7.3"
+                "php": ">=8.1"
             },
             "require-dev": {
                 "ext-json": "*",
-                "phpunit/phpunit": "^9.5"
+                "phpunit/phpunit": "^10.5.45"
             },
             "type": "library",
             "autoload": {
@@ -2393,6 +2599,7 @@
             "keywords": [
                 "certificado",
                 "cfdi",
+                "csd",
                 "efirma",
                 "fiel",
                 "sat",
@@ -2402,7 +2609,7 @@
                 "issues": "https://github.com/phpcfdi/credentials/issues",
                 "source": "https://github.com/phpcfdi/credentials"
             },
-            "time": "2024-06-07T00:37:31+00:00"
+            "time": "2025-04-12T20:29:23+00:00"
         },
         {
             "name": "phpcfdi/sat-catalogos",
@@ -2518,16 +2725,16 @@
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "v6.9.3",
+            "version": "v6.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "2f5c94fe7493efc213f643c23b1b1c249d40f47e"
+                "reference": "bf74d75a1fde6beaa34a0ddae2ec5fce0f72a144"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/2f5c94fe7493efc213f643c23b1b1c249d40f47e",
-                "reference": "2f5c94fe7493efc213f643c23b1b1c249d40f47e",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/bf74d75a1fde6beaa34a0ddae2ec5fce0f72a144",
+                "reference": "bf74d75a1fde6beaa34a0ddae2ec5fce0f72a144",
                 "shasum": ""
             },
             "require": {
@@ -2587,7 +2794,7 @@
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
             "support": {
                 "issues": "https://github.com/PHPMailer/PHPMailer/issues",
-                "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.9.3"
+                "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.10.0"
             },
             "funding": [
                 {
@@ -2595,7 +2802,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-24T18:04:13+00:00"
+            "time": "2025-04-24T15:19:31+00:00"
         },
         {
             "name": "psr/log",
@@ -2649,16 +2856,16 @@
         },
         {
             "name": "ramsey/collection",
-            "version": "2.0.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/collection.git",
-                "reference": "a4b48764bfbb8f3a6a4d1aeb1a35bb5e9ecac4a5"
+                "reference": "344572933ad0181accbf4ba763e85a0306a8c5e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/collection/zipball/a4b48764bfbb8f3a6a4d1aeb1a35bb5e9ecac4a5",
-                "reference": "a4b48764bfbb8f3a6a4d1aeb1a35bb5e9ecac4a5",
+                "url": "https://api.github.com/repos/ramsey/collection/zipball/344572933ad0181accbf4ba763e85a0306a8c5e2",
+                "reference": "344572933ad0181accbf4ba763e85a0306a8c5e2",
                 "shasum": ""
             },
             "require": {
@@ -2666,25 +2873,22 @@
             },
             "require-dev": {
                 "captainhook/plugin-composer": "^5.3",
-                "ergebnis/composer-normalize": "^2.28.3",
-                "fakerphp/faker": "^1.21",
+                "ergebnis/composer-normalize": "^2.45",
+                "fakerphp/faker": "^1.24",
                 "hamcrest/hamcrest-php": "^2.0",
-                "jangregor/phpstan-prophecy": "^1.0",
-                "mockery/mockery": "^1.5",
+                "jangregor/phpstan-prophecy": "^2.1",
+                "mockery/mockery": "^1.6",
                 "php-parallel-lint/php-console-highlighter": "^1.0",
-                "php-parallel-lint/php-parallel-lint": "^1.3",
-                "phpcsstandards/phpcsutils": "^1.0.0-rc1",
-                "phpspec/prophecy-phpunit": "^2.0",
-                "phpstan/extension-installer": "^1.2",
-                "phpstan/phpstan": "^1.9",
-                "phpstan/phpstan-mockery": "^1.1",
-                "phpstan/phpstan-phpunit": "^1.3",
-                "phpunit/phpunit": "^9.5",
-                "psalm/plugin-mockery": "^1.1",
-                "psalm/plugin-phpunit": "^0.18.4",
-                "ramsey/coding-standard": "^2.0.3",
-                "ramsey/conventional-commits": "^1.3",
-                "vimeo/psalm": "^5.4"
+                "php-parallel-lint/php-parallel-lint": "^1.4",
+                "phpspec/prophecy-phpunit": "^2.3",
+                "phpstan/extension-installer": "^1.4",
+                "phpstan/phpstan": "^2.1",
+                "phpstan/phpstan-mockery": "^2.0",
+                "phpstan/phpstan-phpunit": "^2.0",
+                "phpunit/phpunit": "^10.5",
+                "ramsey/coding-standard": "^2.3",
+                "ramsey/conventional-commits": "^1.6",
+                "roave/security-advisories": "dev-latest"
             },
             "type": "library",
             "extra": {
@@ -2722,19 +2926,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/collection/issues",
-                "source": "https://github.com/ramsey/collection/tree/2.0.0"
+                "source": "https://github.com/ramsey/collection/tree/2.1.1"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/ramsey",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/ramsey/collection",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2022-12-31T21:50:55+00:00"
+            "time": "2025-03-22T05:38:12+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -2830,16 +3024,16 @@
         },
         {
             "name": "spipu/html2pdf",
-            "version": "v5.3.0",
+            "version": "v5.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/html2pdf.git",
-                "reference": "c71c189b5009e96b869ebf9eb93eee38c56bc9f0"
+                "reference": "501da93523760875682cfdc755ea413055b3a1a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/html2pdf/zipball/c71c189b5009e96b869ebf9eb93eee38c56bc9f0",
-                "reference": "c71c189b5009e96b869ebf9eb93eee38c56bc9f0",
+                "url": "https://api.github.com/repos/spipu/html2pdf/zipball/501da93523760875682cfdc755ea413055b3a1a1",
+                "reference": "501da93523760875682cfdc755ea413055b3a1a1",
                 "shasum": ""
             },
             "require": {
@@ -2872,7 +3066,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Html2Pdf is a HTML to PDF converter written in PHP5 (it uses TCPDF). OFFICIAL PACKAGE",
+            "description": "Html2Pdf is a HTML to PDF converter written in PHP - It uses TCPDF - OFFICIAL PACKAGE",
             "homepage": "http://html2pdf.fr/",
             "keywords": [
                 "html",
@@ -2881,22 +3075,22 @@
             ],
             "support": {
                 "issues": "https://github.com/spipu/html2pdf/issues",
-                "source": "https://github.com/spipu/html2pdf/tree/v5.3.0"
+                "source": "https://github.com/spipu/html2pdf/tree/v5.3.2"
             },
-            "time": "2025-01-08T09:42:05+00:00"
+            "time": "2025-04-25T09:05:34+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.31.0",
+            "version": "v1.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "60328e362d4c2c802a54fcbf04f9d3fb892b4cf8"
+                "reference": "0cc9dd0f17f61d8131e7df6b84bd344899fe2608"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/60328e362d4c2c802a54fcbf04f9d3fb892b4cf8",
-                "reference": "60328e362d4c2c802a54fcbf04f9d3fb892b4cf8",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/0cc9dd0f17f61d8131e7df6b84bd344899fe2608",
+                "reference": "0cc9dd0f17f61d8131e7df6b84bd344899fe2608",
                 "shasum": ""
             },
             "require": {
@@ -2947,7 +3141,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.31.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.32.0"
             },
             "funding": [
                 {
@@ -2963,20 +3157,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-09T11:45:10+00:00"
+            "time": "2025-01-02T08:10:11+00:00"
         },
         {
             "name": "symfony/process",
-            "version": "v7.2.0",
+            "version": "v7.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "d34b22ba9390ec19d2dd966c40aa9e8462f27a7e"
+                "reference": "87b7c93e57df9d8e39a093d32587702380ff045d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/d34b22ba9390ec19d2dd966c40aa9e8462f27a7e",
-                "reference": "d34b22ba9390ec19d2dd966c40aa9e8462f27a7e",
+                "url": "https://api.github.com/repos/symfony/process/zipball/87b7c93e57df9d8e39a093d32587702380ff045d",
+                "reference": "87b7c93e57df9d8e39a093d32587702380ff045d",
                 "shasum": ""
             },
             "require": {
@@ -3008,7 +3202,7 @@
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/process/tree/v7.2.0"
+                "source": "https://github.com/symfony/process/tree/v7.2.5"
             },
             "funding": [
                 {
@@ -3024,20 +3218,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-06T14:24:19+00:00"
+            "time": "2025-03-13T12:21:46+00:00"
         },
         {
             "name": "tecnickcom/tcpdf",
-            "version": "6.8.2",
+            "version": "6.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tecnickcom/TCPDF.git",
-                "reference": "f7a781073e1645062f163e058139e2f89355d420"
+                "reference": "d0e8dd17f8a1df3c97b94b9af8356e88e811ed59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/f7a781073e1645062f163e058139e2f89355d420",
-                "reference": "f7a781073e1645062f163e058139e2f89355d420",
+                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/d0e8dd17f8a1df3c97b94b9af8356e88e811ed59",
+                "reference": "d0e8dd17f8a1df3c97b94b9af8356e88e811ed59",
                 "shasum": ""
             },
             "require": {
@@ -3050,8 +3244,6 @@
                     "config",
                     "include",
                     "tcpdf.php",
-                    "tcpdf_parser.php",
-                    "tcpdf_import.php",
                     "tcpdf_barcodes_1d.php",
                     "tcpdf_barcodes_2d.php",
                     "include/tcpdf_colors.php",
@@ -3089,7 +3281,7 @@
             ],
             "support": {
                 "issues": "https://github.com/tecnickcom/TCPDF/issues",
-                "source": "https://github.com/tecnickcom/TCPDF/tree/6.8.2"
+                "source": "https://github.com/tecnickcom/TCPDF/tree/6.9.3"
             },
             "funding": [
                 {
@@ -3097,7 +3289,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2025-01-26T14:03:12+00:00"
+            "time": "2025-04-20T15:52:50+00:00"
         }
     ],
     "packages-dev": [
@@ -3218,16 +3410,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.12.1",
+            "version": "1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "123267b2c49fbf30d78a7b2d333f6be754b94845"
+                "reference": "1720ddd719e16cf0db4eb1c6eca108031636d46c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/123267b2c49fbf30d78a7b2d333f6be754b94845",
-                "reference": "123267b2c49fbf30d78a7b2d333f6be754b94845",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/1720ddd719e16cf0db4eb1c6eca108031636d46c",
+                "reference": "1720ddd719e16cf0db4eb1c6eca108031636d46c",
                 "shasum": ""
             },
             "require": {
@@ -3266,7 +3458,7 @@
             ],
             "support": {
                 "issues": "https://github.com/myclabs/DeepCopy/issues",
-                "source": "https://github.com/myclabs/DeepCopy/tree/1.12.1"
+                "source": "https://github.com/myclabs/DeepCopy/tree/1.13.1"
             },
             "funding": [
                 {
@@ -3274,7 +3466,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-08T17:47:46+00:00"
+            "time": "2025-04-29T12:36:36+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -3775,16 +3967,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.5.45",
+            "version": "10.5.46",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "bd68a781d8e30348bc297449f5234b3458267ae8"
+                "reference": "8080be387a5be380dda48c6f41cee4a13aadab3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/bd68a781d8e30348bc297449f5234b3458267ae8",
-                "reference": "bd68a781d8e30348bc297449f5234b3458267ae8",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/8080be387a5be380dda48c6f41cee4a13aadab3d",
+                "reference": "8080be387a5be380dda48c6f41cee4a13aadab3d",
                 "shasum": ""
             },
             "require": {
@@ -3794,7 +3986,7 @@
                 "ext-mbstring": "*",
                 "ext-xml": "*",
                 "ext-xmlwriter": "*",
-                "myclabs/deep-copy": "^1.12.1",
+                "myclabs/deep-copy": "^1.13.1",
                 "phar-io/manifest": "^2.0.4",
                 "phar-io/version": "^3.2.1",
                 "php": ">=8.1",
@@ -3856,7 +4048,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.45"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.46"
             },
             "funding": [
                 {
@@ -3868,11 +4060,19 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://liberapay.com/sebastianbergmann",
+                    "type": "liberapay"
+                },
+                {
+                    "url": "https://thanks.dev/u/gh/sebastianbergmann",
+                    "type": "thanks_dev"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/phpunit/phpunit",
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-02-06T16:08:12+00:00"
+            "time": "2025-05-02T06:46:24+00:00"
         },
         {
             "name": "psr/container",
@@ -4963,12 +5163,15 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "julio101290/boilerplatecartaporte": 20,
+        "julio101290/boilerplateremolques": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.1"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }

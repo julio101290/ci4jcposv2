@@ -73,7 +73,7 @@
 
                         return `<td class="text-right py-0 align-middle">
                          <div class="btn-group btn-group-sm">
-                             <button class="btn btn-success btnActivate" status="on"  idEmpresa="${data.idEmpresa}"  idUser="${data.id}" idEmpresaUsuario="${data.idNombreEmpresa}">ON</button>
+                             <button class="btn btn-success btnActivate" status="on"  idEmpresa="${data.idEmpresa}"  idUser="${data.id}" idEmpresaUsuario="${data.idnombreempresa}">ON</button>
                              
                          </div>
                          </td>`;
@@ -83,7 +83,7 @@
 
                         return `<td class="text-right py-0 align-middle">
                          <div class="btn-group btn-group-sm">
-                             <button class="btn btn-danger btnActivate" status="off" idEmpresa="${data.idEmpresa}"  idUser="${data.id}" idEmpresaUsuario="${data.idNombreEmpresa}">OFF</button>
+                             <button class="btn btn-danger btnActivate" status="off" idEmpresa="${data.idEmpresa}"  idUser="${data.id}" idEmpresaUsuario="${data.idnombreempresa}">OFF</button>
                              
                          </div>
                          </td>`;

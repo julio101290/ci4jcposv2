@@ -74,7 +74,7 @@
             <div class="input-group-prepend">
                 <span class="input-group-text"><i class="fas fa-location-arrow"></i></span>
             </div>
-            <input type="number" name="port" id="port" class="form-control <?= session('error.port') ? 'is-invalid' : '' ?>" value="<?= old('port') ?>" placeholder="Puerto" autocomplete="off">
+            <input type="number" name="port" id="port" class="form-control <?= session('error.port') ? 'is-invalid' : '' ?>" value="0" placeholder="Puerto" autocomplete="off">
         </div>
     </div>
 </div>

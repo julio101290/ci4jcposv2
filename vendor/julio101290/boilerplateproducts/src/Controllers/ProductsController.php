@@ -6,9 +6,14 @@ use App\Controllers\BaseController;
 use julio101290\boilerplateproducts\Models\ProductsModel;
 use julio101290\boilerplatelog\Models\LogModel;
 use CodeIgniter\API\ResponseTrait;
-use \julio101290\boilerplateproducts\Models\{CategoriasModel};
+use \julio101290\boilerplateproducts\Models\{
+    CategoriasModel
+};
 use julio101290\boilerplatecompanies\Models\EmpresasModel;
-//use App\Models\QuotesDetailsModel;
+use julio101290\boilerplatesells\Models\SellsDetailsModel;
+use julio101290\boilerplatequotes\Models\QuotesDetailsModel;
+use julio101290\boilerplatetypesmovement\Models\Tipos_movimientos_inventarioModel;
+
 //use App\Models\SellsDetailsModel;
 //use App\Models\Tipos_movimientos_inventarioModel;
 
@@ -20,18 +25,19 @@ class ProductsController extends BaseController {
     protected $products;
     protected $empresa;
     protected $categorias;
-    //protected $sellsDetails;
-    //protected $quoteDetails;
-    //protected $tiposMovimientoInventario;
+    protected $sellsDetails;
+
+    protected $quoteDetails;
+    protected $tiposMovimientoInventario;
 
     public function __construct() {
         $this->products = new ProductsModel();
         $this->log = new LogModel();
         $this->categorias = new CategoriasModel();
         $this->empresa = new EmpresasModel();
-        //$this->sellsDetails = new SellsDetailsModel();
-        //$this->quoteDetails = new QuotesDetailsModel();
-        //$this->tiposMovimientoInventario = new Tipos_movimientos_inventarioModel();
+        $this->sellsDetails = new SellsDetailsModel();
+        $this->quoteDetails = new QuotesDetailsModel();
+        $this->tiposMovimientoInventario = new Tipos_movimientos_inventarioModel();
         helper('menu');
     }
 
@@ -457,20 +463,23 @@ class ProductsController extends BaseController {
         if (!isset($postData['searchTerm'])) {
             // Fetch record
 
-            $listProducts = $products->select('id,description')->where("deleted_at", null)
+            $listProducts = $products->select(
+                            'id AS id, description AS description'
+                    )
+                    ->where('deleted_at', null)
                     ->where('idEmpresa', $idEmpresa)
-                    ->orderBy('id')
-                    ->orderBy('descripcion')
+                    ->orderBy('id', 'ASC')
+                    ->orderBy('description', 'ASC')
                     ->findAll(1000);
         } else {
             $searchTerm = $postData['searchTerm'];
 
             // Fetch record
-
-            $listProducts = $products->select('id,description')->where("deleted_at", null)
+            $listProducts = $products->select('id AS id, description AS description')
+                    ->where('deleted_at', null)
                     ->where('idEmpresa', $idEmpresa)
                     ->groupStart()
-                    ->like('descripcion', $searchTerm)
+                    ->like('description', $searchTerm)
                     ->orLike('id', $searchTerm)
                     ->groupEnd()
                     ->findAll(1000);
@@ -554,9 +563,8 @@ class ProductsController extends BaseController {
 
 
         $productos = $this->products->select("barcode")
-                ->whereIn("idEmpresa", $empresasID)
-                ->where("id", $idProducto)->findAll();
-                
+                        ->whereIn("idEmpresa", $empresasID)
+                        ->where("id", $idProducto)->findAll();
 
         $pdf->AddPage('P', 'A7');
 

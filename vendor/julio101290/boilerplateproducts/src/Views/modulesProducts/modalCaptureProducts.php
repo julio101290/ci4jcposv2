@@ -305,6 +305,11 @@
 
         $("#claveProductoSAT").trigger("change");
 
+        $("#stock").val("0");
+
+        $("#buyPrice").val("0");
+
+        $("#salePrice").val("0");
 
         $("#facturacionRD").bootstrapToggle("off");
 
@@ -358,9 +363,9 @@
 
         var nombreUnidadSAT = $("#unidadSAT option:selected").text();
         var nombreClaveProducto = $("#claveProductoSAT option:selected").text();
-        
-        
-        
+
+
+
         var predial = $("#predial").val();
 
 
@@ -486,8 +491,8 @@
         datos.append("inmuebleOcupado", inmuebleOcupado);
         datos.append("tasaExcenta", tasaExcenta);
         datos.append("predial", predial);
-        
-        
+
+
 
         $.ajax({
 

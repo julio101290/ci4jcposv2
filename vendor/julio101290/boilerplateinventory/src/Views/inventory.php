@@ -68,7 +68,11 @@
 
                                 <th>#</th>
                                 <th>
-                                    Proveedor
+                                    Nombre Proveedor
+                                </th>
+
+                                <th>
+                                    Apellido Proveedor
                                 </th>
                                 <th>
                                     Fecha
@@ -144,9 +148,9 @@
         },
         columnDefs: [{
                 orderable: false,
-                targets: [12],
+                targets: [13],
                 searchable: false,
-                targets: [12]
+                targets: [13]
 
             }],
         columns: [{
@@ -154,7 +158,10 @@
             },
 
             {
-                'data': 'nameProveedor'
+                'data': 'firstname'
+            },
+            {
+                'data': 'lastname'
             },
 
             {
@@ -267,7 +274,7 @@
 
         console.log(uuid);
 
-       // tableProducts.ajax.url(`<?= base_url('admin/payments/getPayments') ?>/` + uuid).load();
+        // tableProducts.ajax.url(`<?= base_url('admin/payments/getPayments') ?>/` + uuid).load();
 
     });
 

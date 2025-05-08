@@ -52,8 +52,8 @@
 
                         </div>
 
-                        
-                 
+
+
 
 
                     </div>
@@ -78,7 +78,7 @@
     $("#SMTPAuth").select2();
     $("#smptSecurity").select2();
 
-    $(document).on('click', '.btnAddEmpresa', function(e) {
+    $(document).on('click', '.btnAddEmpresa', function (e) {
 
         console.log("asd");
 
@@ -94,6 +94,8 @@
         $("#SMTPAuth").val("0");
         $("#smptSecurity").val("0");
         $("#facturacionRD").bootstrapToggle("off");
+        $("#port").val("0");
+        $("#codigoPostal").val("0");
 
     });
 
@@ -103,7 +105,7 @@
 
 
 
-    $(document).on('click', '.btnEditarEmpresa', function(e) {
+    $(document).on('click', '.btnEditarEmpresa', function (e) {
 
 
         var idEmpresa = $(this).attr("idEmpresa");

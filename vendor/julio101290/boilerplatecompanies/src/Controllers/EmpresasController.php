@@ -101,10 +101,10 @@ class EmpresasController extends BaseController {
 
         $certificado = $this->request->getFile('certificado');
         $archivoKey = $this->request->getFile('archivoKey');
-        
+
         $certificadoCSD = $this->request->getFile('certificadoCSD');
         $archivoKeyCSD = $this->request->getFile('archivoKeyCSD');
-        
+
         $logo = $this->request->getFile('logo');
 
         if ($certificado <> null) {
@@ -124,10 +124,10 @@ class EmpresasController extends BaseController {
 
             $datos["archivoKey"] = $datos["rfc"] . "_certificado.key";
         }
-        
-        
-        
-        
+
+
+
+
         if ($certificadoCSD <> null) {
             if ($certificadoCSD->getClientExtension() <> "cer") {
 
@@ -190,9 +190,9 @@ class EmpresasController extends BaseController {
                 if ($archivoKey <> null) {
                     $archivoKey->move(WRITEPATH . "uploads/certificates", $datos["rfc"] . "_certificado.key");
                 }
-                
-                
-                
+
+
+
                 if ($certificadoCSD <> null) {
                     $certificado->move(WRITEPATH . "uploads/certificates", $datos["rfc"] . "_certificadoCSD.cer");
                 }
@@ -240,11 +240,11 @@ class EmpresasController extends BaseController {
 
                 if ($archivoKey <> null) {
 
-                    if(file_Exists((WRITEPATH . "uploads/certificates/" . $datosAnteriores["rfc"] . "_certificado.key"))){
-                    unlink(WRITEPATH . "uploads/certificates/" . $datosAnteriores["rfc"] . "_certificado.key");
+                    if (file_Exists((WRITEPATH . "uploads/certificates/" . $datosAnteriores["rfc"] . "_certificado.key"))) {
+                        unlink(WRITEPATH . "uploads/certificates/" . $datosAnteriores["rfc"] . "_certificado.key");
                     }
                 }
-                
+
                 if ($certificadoCSD <> null) {
 
                     if (file_Exists(WRITEPATH . "uploads/certificates/" . $datosAnteriores["rfc"] . "_certificadoCSD.cer")) {
@@ -257,31 +257,31 @@ class EmpresasController extends BaseController {
 
                 if ($archivoKeyCSD <> null) {
 
-                    if(file_Exists((WRITEPATH . "uploads/certificates/" . $datosAnteriores["rfc"] . "_certificadoCSD.key"))){
-                    unlink(WRITEPATH . "uploads/certificates/" . $datosAnteriores["rfc"] . "_certificadoCSD.key");
+                    if (file_Exists((WRITEPATH . "uploads/certificates/" . $datosAnteriores["rfc"] . "_certificadoCSD.key"))) {
+                        unlink(WRITEPATH . "uploads/certificates/" . $datosAnteriores["rfc"] . "_certificadoCSD.key");
+                    }
+
+                    $archivoKeyCSD->move(WRITEPATH . "uploads/certificates", $datos["rfc"] . "_certificadoCSD.key");
                 }
 
-                $archivoKeyCSD->move(WRITEPATH . "uploads/certificates", $datos["rfc"] . "_certificadoCSD.key");
-            }
+                if ($logo <> null) {
 
-            if ($logo <> null) {
+                    if (file_Exists("images/logo/" . $datosAnteriores["rfc"] . "_logo.png")) {
 
-                if (file_Exists("images/logo/" . $datosAnteriores["rfc"] . "_logo.png")) {
+                        unlink("images/logo/" . $datosAnteriores["rfc"] . "_logo.png");
+                    }
 
-                    unlink("images/logo/" . $datosAnteriores["rfc"] . "_logo.png");
+                    $logo->move("images/logo", $datos["rfc"] . "_logo.png");
                 }
 
-                $logo->move("images/logo", $datos["rfc"] . "_logo.png");
+                $dateLog["description"] = lang("empresas.logUpdated") . json_encode($datosAnteriores);
+                $dateLog["user"] = $userName;
+
+                $this->log->save($dateLog);
+                echo "Actualizado Correctamente";
+
+                return;
             }
-
-            $dateLog["description"] = lang("empresas.logUpdated") . json_encode($datosAnteriores);
-            $dateLog["user"] = $userName;
-
-            $this->log->save($dateLog);
-            echo "Actualizado Correctamente";
-
-            return;
-        }
         }
 
         return;
@@ -336,17 +336,45 @@ class EmpresasController extends BaseController {
 
         $tablaUsuariosNombre = $this->usuarios->db->prefixTable("users");
 
-        $usuarios = $this->usuarios->select("id,username,$empresa as idEmpresa")->where("deleted_at", null)
-                ->select("ifnull((select status 
-                                    from $nombreUsuariosEmpresa
-                                    where idUsuario=$tablaUsuariosNombre.id
-                                        and $nombreUsuariosEmpresa.idEmpresa=$empresa
-                                         ),'off') as status")
-                ->select("ifnull((select $nombreUsuariosEmpresa.id 
-                                         from $nombreUsuariosEmpresa
-                                         where idUsuario=$tablaUsuariosNombre.id
-                                             and $nombreUsuariosEmpresa.idEmpresa=$empresa
-                                              ),0) as idNombreEmpresa");
+        $db = \Config\Database::connect();
+
+        if ($db->DBDriver === 'pgsql' || $db->DBDriver === 'PDO\Postgres' || $db->DBDriver === 'Postgre') {
+
+
+            $usuarios = $this->usuarios->select("u.id as id, u.username as username, {$empresa} as idEmpresa")
+                    ->select("COALESCE((SELECT ue.status
+                       FROM {$nombreUsuariosEmpresa} ue
+                       WHERE \"ue\".\"idUsuario\" = u.id
+                         AND \"ue\".\"idEmpresa\" = {$empresa}), 'off') AS status")
+                    ->select("COALESCE((SELECT ue.id
+                       FROM {$nombreUsuariosEmpresa} ue
+                       WHERE \"ue\".\"idUsuario\" = u.id
+                         AND \"ue\".\"idEmpresa\" = {$empresa}), 0) AS idnombreempresa")
+                    ->from("{$tablaUsuariosNombre} u")
+                    ->where("u.deleted_at", null)
+                    ->groupBy("u.id"); // Agrega esta línea para evitar la repetición de usuarios
+            
+        } else {
+            
+             $usuarios = $this->usuarios->select("u.id as id, u.username as username, {$empresa} as idEmpresa")
+                    ->select("COALESCE((SELECT ue.status
+                       FROM {$nombreUsuariosEmpresa} ue
+                       WHERE ue.idUsuario = u.id
+                         AND ue.idEmpresa = {$empresa}), 'off') AS status")
+                    ->select("COALESCE((SELECT ue.id
+                       FROM {$nombreUsuariosEmpresa} ue
+                       WHERE ue.idUsuario = u.id
+                         AND ue.idEmpresa = {$empresa}), 0) AS idnombreempresa")
+                    ->from("{$tablaUsuariosNombre} u")
+                    ->where("u.deleted_at", null)
+                    ->groupBy("u.id"); // Agrega esta línea para evitar la repetición de usuarios
+            
+            
+            
+        }
+        
+        $db->close();
+
 
         return \Hermawan\DataTables\DataTable::of($usuarios)->toJson(true);
     }
@@ -391,5 +419,4 @@ class EmpresasController extends BaseController {
             echo "ok";
         }
     }
-
 }

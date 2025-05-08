@@ -1,7 +1,7 @@
 [![Latest Stable Version](https://poser.okvpn.org/julio101290/boilerplatestorages/v/stable)](https://packagist.org/packages/julio101290/boilerplatestorages) [![Total Downloads](https://poser.okvpn.org/julio101290/boilerplatestorages/downloads)](https://packagist.org/packages/julio101290/boilerplatestorages) [![Latest Unstable Version](https://poser.okvpn.org/julio101290/boilerplatestorages/v/unstable)](https://packagist.org/packages/julio101290/boilerplatestorages) [![License](https://poser.okvpn.org/julio101290/boilerplatestorages/license)](https://packagist.org/packages/julio101290/boilerplatestorages)
 
 ## CodeIgniter 4 Boilerplate Storages
-CodeIgniter4 Boilerplatecompanies CRUD MVC contain capture storages for inventory, with the fields Companie, Code, Name, startOperation, Type, branchoffice etc
+CodeIgniter4 Boilerplatestorages CRUD MVC contain name,companie,key,date start
 
 
 ## Requirements

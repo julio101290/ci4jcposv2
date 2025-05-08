@@ -1,7 +1,7 @@
 [![Latest Stable Version](https://poser.okvpn.org/julio101290/boilerplatecustumers/v/stable)](https://packagist.org/packages/julio101290/boilerplatecustumers) [![Total Downloads](https://poser.okvpn.org/julio101290/boilerplatecustumers/downloads)](https://packagist.org/packages/julio101290/boilerplatecustumers) [![Latest Unstable Version](https://poser.okvpn.org/julio101290/boilerplatecustumers/v/unstable)](https://packagist.org/packages/julio101290/boilerplatecustumers) [![License](https://poser.okvpn.org/julio101290/boilerplatecustumers/license)](https://packagist.org/packages/julio101290/boilerplatecustumers)
 
 ## CodeIgniter 4 Boilerplate Custumers
-CodeIgniter4 Boilerplatebranchoffice CRUD MVC contain capture per companie Key,name, address, admin box
+CodeIgniter4 Boilerplatecustumers CRUD MVC contain capture basic as name, lastname taxID and SAT Fields invoices CFDI 4.0
 
 
 ## Requirements

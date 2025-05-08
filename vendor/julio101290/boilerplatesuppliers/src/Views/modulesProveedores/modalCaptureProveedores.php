@@ -93,6 +93,8 @@
 
         $("#regimenFiscal").val("0");
         $("#regimenFiscal").trigger("change");
+        
+        $("#codigoPostal").val("00000");
 
     });
 

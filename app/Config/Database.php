@@ -24,9 +24,17 @@ class Database extends Config
      *
      * @var array<string, mixed>
      */
+
+ 
+    /**
+     * MariaDB
+     * @var array
+     */
+    
+/*
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'localhost',
+        'hostname'     => '127.0.0.1',
         'username'     => 'root',
         'password'     => '',
         'database'     => 'puntoventa',
@@ -49,7 +57,64 @@ class Database extends Config
             'time'     => 'H:i:s',
         ],
     ];
+    
+ */
+/*
+            public array $default = [
+            'DSN'        => '',
+            'hostname'   => '127.0.0.1',
+            'username'   => 'sa',
+            'password'   => 'abc123..',
+            'database'   => 'pos',
+            'schema'     => 'dbo',
+            'DBDriver'   => 'SQLSRV',
+            'DBPrefix'   => '',
+            'pConnect'   => false,
+            'DBDebug'    => true,
+            'charset'    => 'utf8',
+            'swapPre'    => '',
+            'encrypt'    => false,
+            'failover'   => [],
+            'port'       => 1433,
+            'dateFormat' => [
+                'date'     => 'Y-m-d',
+                'datetime' => 'Y-m-d H:i:s',
+                'time'     => 'H:i:s',
+            ],
+        ];
 
+        */
+    
+    /**
+     * PostgressSQL
+     * @var array
+     */
+
+  
+        public array $default = [
+            'DSN'        => '',
+            'hostname'   => '127.0.0.1', // Cambia a la dirección de tu servidor PostgreSQL si es diferente
+            'username'   => 'postgres', // Reemplaza con tu nombre de usuario de PostgreSQL
+            'password'   => 'abc123..', // Reemplaza con tu contraseña de PostgreSQL
+            'database'   => 'pos', // Reemplaza con el nombre de tu base de datos PostgreSQL
+            'DBDriver'   => 'Postgre', // Cambia el Driver a 'Postgre'
+            'DBPrefix'   => '',
+            'pConnect'   => false,
+            'DBDebug'    => true,
+            'charset'    => 'utf8',
+            'swapPre'    => '',
+            'encrypt'    => false,
+            'failover'   => [],
+            'port'       => 5432, // El puerto por defecto de PostgreSQL es 5432
+            'schema'     => 'public', // El esquema por defecto en PostgreSQL es 'public'
+            'dateFormat' => [
+                'date'     => 'Y-m-d',
+                'datetime' => 'Y-m-d H:i:s',
+                'time'     => 'H:i:s',
+            ],
+        ];
+ 
+   
     //    /**
     //     * Sample database connection for SQLite3.
     //     *

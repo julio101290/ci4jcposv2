@@ -6,7 +6,6 @@ use App\Controllers\BaseController;
 use \App\Models\UserModel;
 use julio101290\boilerplatelog\Models\LogModel;
 use julio101290\boilerplatequotes\Models\QuotesModel;
-
 use CfdiUtils\Elements\Cfdi40\Concepto;
 use CodeIgniter\API\ResponseTrait;
 use julio101290\boilerplatecompanies\Models\EmpresasModel;
@@ -1371,6 +1370,19 @@ class FacturaElectronicaController extends BaseController {
         $atributosSeguroVehiculo["AseguraRespCivil"] = $cartaPorte["AseguraRespCivil"];
         $atributosSeguroVehiculo["PolizaRespCivil"] = $cartaPorte["PolizaRespCivil"];
 
+        if ($cartaPorte["AseguraMedAmbiente"] != "") {
+
+            $atributosSeguroVehiculo["AseguraMedAmbiente"] = $cartaPorte["AseguraMedAmbiente"];
+        }
+
+        if ($cartaPorte["PolizaRespCivil"]) {
+
+            $atributosSeguroVehiculo["PolizaMedAmbiente"] = $cartaPorte["PolizaRespCivil"];
+        }
+
+
+
+
         $autotransporte->addSeguros($atributosSeguroVehiculo);
 
         if ($cartaPorte["remolqueCartaPorte"] != "") {
@@ -1546,7 +1558,33 @@ class FacturaElectronicaController extends BaseController {
             $atributosMercancia["ClaveUnidad"] = $value["ClaveUnidad"];
             $atributosMercancia["Unidad"] = $value["Unidad"];
 
-            // $atributosMercancia["MaterialPeligroso"] = $value["MaterialPeligroso"];
+            if ($value["MaterialPeligroso"] != "") {
+
+                $atributosMercancia["MaterialPeligroso"] = $value["MaterialPeligroso"];
+            }
+
+
+            if ($value["MaterialPeligroso"] != "") {
+
+                $atributosMercancia["MaterialPeligroso"] = $value["claveProductoSATMaterialPeligroso"];
+            }
+
+
+
+            if ($value["claveTipoEmbalaje"] != "") {
+
+                $atributosMercancia["Embalaje"] = $value["claveTipoEmbalaje"];
+            }
+
+
+            if ($value["descripcionEmbalaje"] != "") {
+
+                $atributosMercancia["DescripEmbalaje"] = $value["descripcionEmbalaje"];
+            }
+
+
+
+
             $atributosMercancia["PesoEnKg"] = $value["PesoEnKg"];
 
             $mercancia->addAttributes($atributosMercancia);
@@ -2183,7 +2221,7 @@ class FacturaElectronicaController extends BaseController {
                 'EquivalenciaDR' => "1",
                 'NumParcialidad' => $parcialidad,
                 'ImpSaldoAnt' => $totalDeFactura - $saldo,
-                'ImpSaldoInsoluto' => number_format(($totalDeFactura - $saldo) - $value["importPayment"],2,".",""),
+                'ImpSaldoInsoluto' => number_format(($totalDeFactura - $saldo) - $value["importPayment"], 2, ".", ""),
                 'ImpPagado' => number_format($value["importPayment"], 2, ".", ""),
             ]);
             /*
@@ -2523,7 +2561,7 @@ class FacturaElectronicaController extends BaseController {
             } else {
                 throw new LogicException(
                                 'The batch function could not find the "' . $function . '" function.'
-                );
+                        );
             }
         }
 

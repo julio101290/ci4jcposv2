@@ -20,7 +20,7 @@
             <div class="input-group-prepend">
                 <span class="input-group-text"><i class="fas fa-location-arrow"></i></span>
             </div>
-            <input type="text" name="codigoPostal" id="codigoPostal" class="form-control <?= session('error.codigoPostal') ? 'is-invalid' : '' ?>" value="<?= old('codigoPostal') ?>" placeholder="<?= lang('empresas.fields.codigoPostal') ?>" autocomplete="off">
+            <input type="text" name="codigoPostal" id="codigoPostal" class="form-control <?= session('error.codigoPostal') ? 'is-invalid' : '' ?>" value="0" placeholder="<?= lang('empresas.fields.codigoPostal') ?>" autocomplete="off">
         </div>
     </div>
 </div>

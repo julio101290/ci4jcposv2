@@ -12,10 +12,11 @@
     "require": {
         "php": "^8.1",
         "codeigniter4/framework": "^4.0",
-        "hermawan/codeigniter4-datatables": "^0.7.2",
+        "hermawan/codeigniter4-datatables": "^0.8.0",
         "julio101290/boilerplatbackup": "^1.0",
         "julio101290/boilerplate": "^1.4",
         "julio101290/boilerplatebranchoffice": "^0.0.1",
+        "julio101290/boilerplatecartaporte": "dev-main",
         "julio101290/boilerplatecashtonnage": "^1.0",
         "julio101290/boilerplatecfdi": "^1.0",
         "julio101290/boilerplatecfdielectronicseries": "^1.0",
@@ -25,8 +26,10 @@
         "julio101290/boilerplatecustumers": "^1.0",
         "julio101290/boilerplatedrivers": "^1.0",
         "julio101290/boilerplateinventory": "*",
+        "julio101290/boilerplatelocations": "^1.0",
         "julio101290/boilerplateproducts": "^1.0",
         "julio101290/boilerplatequotes": "^1.0",
+        "julio101290/boilerplateremolques": "dev-main",
         "julio101290/boilerplatesells": "^1.0",
         "julio101290/boilerplatesettings": "^1.0",
         "julio101290/boilerplatestorages": "^1.0",
@@ -43,7 +46,8 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Config\\": "app/Config/"
+            "Config\\": "app/Config/",
+            "Hermawan\\DataTables\\": "app/Overrides/DataTables/"
         },
         "exclude-from-classmap": [
             "**/Database/Migrations/**"

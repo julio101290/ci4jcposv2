@@ -133,7 +133,7 @@
         var name = $("#name").val();
         var type = $("#type").val();
         var brachoffice = $("#brachoffice").val();
-        var company = $("#company").val();
+        var company = $("#idEmpresaStorage").val();
         var costCenter = $("#costCenter").val();
         var exist = $("#exist").val();
         var list = $("#list").val();

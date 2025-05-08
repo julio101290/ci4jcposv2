@@ -33,6 +33,7 @@ class DataTableColumnDefs
         $column->type       = 'numbering';
         $column->searchable = FALSE;
         $column->orderable  = FALSE;
+        $column->escape     = FALSE;
 
         array_unshift($this->columns, $column);
 
@@ -48,6 +49,7 @@ class DataTableColumnDefs
         $column->searchable = FALSE;
         $column->orderable  = FALSE;
         $column->callback   = $callback;
+        $column->escape     = FALSE;
 
         switch ($position) {
            
@@ -95,6 +97,20 @@ class DataTableColumnDefs
             
         }
         
+    }
+
+    public function escape($alias, $escape = TRUE)
+    {
+        if($alias)
+        {
+            $column = $this->getColumnBy('alias', $alias);
+            if(is_object($column))
+            {
+                $column->escape = $escape;
+            }
+            
+        }
+
     }
 
     public function remove($alias)
@@ -277,7 +293,6 @@ class DataTableColumnDefs
                                   $selectParsed['no_quotes']['parts'][0].'.'.$selectParsed['no_quotes']['parts'][1] :
                                   $selectParsed['no_quotes']['parts'][0];
                                   
-                        $alias  = $alias;
 
                     }
 

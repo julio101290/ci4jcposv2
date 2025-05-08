@@ -5,6 +5,10 @@ namespace Hermawan\DataTables;
 class DataTableQuery
 {
 
+    /**
+     * Builder from CodeIgniter Query Builder
+     * @param  \CodeIgniter\Database\BaseBuilder| \CodeIgniter\BaseModel $builder
+     */
     private $builder;
 
     private $columnDefs;
@@ -72,15 +76,13 @@ class DataTableQuery
 
         foreach ($queryResult as $row) 
         {
-            //escaping all
-            foreach($row as $key => $val)
-                $row->$key = esc($val);
-
             $data    = [];
             $columns = $this->columnDefs->getColumns();
 
             foreach ($columns as $index => $column) 
             {
+                if($column->escape)
+                    $row->{$column->alias} = esc($row->{$column->alias});
                 switch ($column->type) {
                     case 'numbering':
                         $value = $this->columnDefs->getNumbering();
