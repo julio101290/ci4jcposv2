@@ -21,23 +21,42 @@ class TipovehiculoModel extends Model {
     protected $skipValidation = false;
 
     public function mdlGetTipovehiculo($idEmpresas) {
+        $builder = $this->db->table('tipovehiculo a');
 
-        $result = $this->db->table('tipovehiculo a, empresas b')
-                ->select('a.id,a.idEmpresa,a.codigo,a.descripcion,a.created_at,a.updated_at,a.deleted_at ,b.nombre as nombreEmpresa')
-                ->where('a.idEmpresa', 'b.id', FALSE)
-                ->whereIn('a.idEmpresa', $idEmpresas);
+        $builder->select([
+            'a.id AS id',
+            'a.idEmpresa AS idEmpresa',
+            'a.codigo AS codigo',
+            'a.descripcion AS descripcion',
+            'a.created_at AS created_at',
+            'a.updated_at AS updated_at',
+            'a.deleted_at AS deleted_at',
+            'b.nombre AS nombreEmpresa'
+        ]);
 
-        return $result;
+        $builder->join('empresas b', 'a.idEmpresa = b.id');
+        $builder->whereIn('a.idEmpresa', $idEmpresas);
+
+        return $builder;
     }
 
     public function mdlGetTipovehiculoArray($idEmpresas) {
+        $builder = $this->db->table('tipovehiculo a');
 
-        $result = $this->db->table('tipovehiculo a, empresas b')
-                        ->select('a.id,a.idEmpresa,a.codigo,a.descripcion,a.created_at,a.updated_at,a.deleted_at ,b.nombre as nombreEmpresa')
-                        ->where('a.idEmpresa', 'b.id', FALSE)
-                        ->whereIn('a.idEmpresa', $idEmpresas)->get()->getResultArray();
+        $builder->select([
+            'a.id AS id',
+            'a.idEmpresa AS idEmpresa',
+            'a.codigo AS codigo',
+            'a.descripcion AS descripcion',
+            'a.created_at AS created_at',
+            'a.updated_at AS updated_at',
+            'a.deleted_at AS deleted_at',
+            'b.nombre AS nombreEmpresa'
+        ]);
 
-        return $result;
+        $builder->join('empresas b', 'a.idEmpresa = b.id');
+        $builder->whereIn('a.idEmpresa', $idEmpresas);
+
+        return $builder->get()->getResultArray();
     }
-
 }

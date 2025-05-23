@@ -1452,17 +1452,17 @@
         },
         {
             "name": "julio101290/boilerplatedrivers",
-            "version": "v1.0.0",
-            "version_normalized": "1.0.0.0",
+            "version": "v1.0.1",
+            "version_normalized": "1.0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplateDrivers.git",
-                "reference": "a7dd1b6ab3e8aab48dcc6d4737ecdee4e7b15147"
+                "reference": "13b95cb6d66b4776afa3265db2153172e8dc5cd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplateDrivers/zipball/a7dd1b6ab3e8aab48dcc6d4737ecdee4e7b15147",
-                "reference": "a7dd1b6ab3e8aab48dcc6d4737ecdee4e7b15147",
+                "url": "https://api.github.com/repos/julio101290/boilerplateDrivers/zipball/13b95cb6d66b4776afa3265db2153172e8dc5cd3",
+                "reference": "13b95cb6d66b4776afa3265db2153172e8dc5cd3",
                 "shasum": ""
             },
             "require": {
@@ -1478,7 +1478,7 @@
                 "fakerphp/faker": "^1.13",
                 "phpunit/phpunit": "^9.1"
             },
-            "time": "2024-12-23T22:24:00+00:00",
+            "time": "2025-05-16T19:42:27+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -1509,23 +1509,23 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplateDrivers/issues",
-                "source": "https://github.com/julio101290/boilerplateDrivers/tree/v1.0.0"
+                "source": "https://github.com/julio101290/boilerplateDrivers/tree/v1.0.1"
             },
             "install-path": "../julio101290/boilerplatedrivers"
         },
         {
             "name": "julio101290/boilerplateinventory",
-            "version": "v1.0.0",
-            "version_normalized": "1.0.0.0",
+            "version": "v1.0.1",
+            "version_normalized": "1.0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplateInventory.git",
-                "reference": "8a220f67b7849370be21fc1be263557524a80c45"
+                "reference": "e3dcfb8f86878f629cf673f23a5e42853cc4f014"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplateInventory/zipball/8a220f67b7849370be21fc1be263557524a80c45",
-                "reference": "8a220f67b7849370be21fc1be263557524a80c45",
+                "url": "https://api.github.com/repos/julio101290/boilerplateInventory/zipball/e3dcfb8f86878f629cf673f23a5e42853cc4f014",
+                "reference": "e3dcfb8f86878f629cf673f23a5e42853cc4f014",
                 "shasum": ""
             },
             "require": {
@@ -1544,7 +1544,7 @@
                 "fakerphp/faker": "^1.13",
                 "phpunit/phpunit": "^9.1"
             },
-            "time": "2024-12-11T23:56:58+00:00",
+            "time": "2025-05-16T19:08:41+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -1575,7 +1575,7 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplateInventory/issues",
-                "source": "https://github.com/julio101290/boilerplateInventory/tree/v1.0.0"
+                "source": "https://github.com/julio101290/boilerplateInventory/tree/v1.0.1"
             },
             "install-path": "../julio101290/boilerplateinventory"
         },
@@ -1710,17 +1710,17 @@
         },
         {
             "name": "julio101290/boilerplateproducts",
-            "version": "v1.0.4",
-            "version_normalized": "1.0.4.0",
+            "version": "v1.0.5",
+            "version_normalized": "1.0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplateproducts.git",
-                "reference": "3b247744bc0ebc6c3333e0d950a5180404d3e7a5"
+                "reference": "71a538a42dca3b11b1eec0ec639bb23b43fecf8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplateproducts/zipball/3b247744bc0ebc6c3333e0d950a5180404d3e7a5",
-                "reference": "3b247744bc0ebc6c3333e0d950a5180404d3e7a5",
+                "url": "https://api.github.com/repos/julio101290/boilerplateproducts/zipball/71a538a42dca3b11b1eec0ec639bb23b43fecf8a",
+                "reference": "71a538a42dca3b11b1eec0ec639bb23b43fecf8a",
                 "shasum": ""
             },
             "require": {
@@ -1737,7 +1737,7 @@
                 "fakerphp/faker": "^1.13",
                 "phpunit/phpunit": "^9.1"
             },
-            "time": "2025-05-05T19:29:45+00:00",
+            "time": "2025-05-08T22:34:32+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -1768,7 +1768,7 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplateproducts/issues",
-                "source": "https://github.com/julio101290/boilerplateproducts/tree/v1.0.4"
+                "source": "https://github.com/julio101290/boilerplateproducts/tree/v1.0.5"
             },
             "install-path": "../julio101290/boilerplateproducts"
         },
@@ -2243,17 +2243,17 @@
         },
         {
             "name": "julio101290/boilerplatevehicles",
-            "version": "v1.0.0",
-            "version_normalized": "1.0.0.0",
+            "version": "v1.0.1",
+            "version_normalized": "1.0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplateVehicles.git",
-                "reference": "82c590a4313699b2dd15fef9ba57bcaf38ad39ce"
+                "reference": "00e37a5f22a8743e408a3fddeb4b5a4ee17f3557"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplateVehicles/zipball/82c590a4313699b2dd15fef9ba57bcaf38ad39ce",
-                "reference": "82c590a4313699b2dd15fef9ba57bcaf38ad39ce",
+                "url": "https://api.github.com/repos/julio101290/boilerplateVehicles/zipball/00e37a5f22a8743e408a3fddeb4b5a4ee17f3557",
+                "reference": "00e37a5f22a8743e408a3fddeb4b5a4ee17f3557",
                 "shasum": ""
             },
             "require": {
@@ -2269,7 +2269,7 @@
                 "fakerphp/faker": "^1.13",
                 "phpunit/phpunit": "^9.1"
             },
-            "time": "2024-12-23T18:30:04+00:00",
+            "time": "2025-05-16T19:20:50+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -2300,7 +2300,7 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplateVehicles/issues",
-                "source": "https://github.com/julio101290/boilerplateVehicles/tree/v1.0.0"
+                "source": "https://github.com/julio101290/boilerplateVehicles/tree/v1.0.1"
             },
             "install-path": "../julio101290/boilerplatevehicles"
         },
@@ -5273,24 +5273,24 @@
         },
         {
             "name": "tecnickcom/tcpdf",
-            "version": "6.9.3",
-            "version_normalized": "6.9.3.0",
+            "version": "6.9.4",
+            "version_normalized": "6.9.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tecnickcom/TCPDF.git",
-                "reference": "d0e8dd17f8a1df3c97b94b9af8356e88e811ed59"
+                "reference": "c838d7f7babb0d35763acfb9ecf78c3f45966f83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/d0e8dd17f8a1df3c97b94b9af8356e88e811ed59",
-                "reference": "d0e8dd17f8a1df3c97b94b9af8356e88e811ed59",
+                "url": "https://api.github.com/repos/tecnickcom/TCPDF/zipball/c838d7f7babb0d35763acfb9ecf78c3f45966f83",
+                "reference": "c838d7f7babb0d35763acfb9ecf78c3f45966f83",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "php": ">=7.1.0"
             },
-            "time": "2025-04-20T15:52:50+00:00",
+            "time": "2025-05-13T11:34:35+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -5335,11 +5335,11 @@
             ],
             "support": {
                 "issues": "https://github.com/tecnickcom/TCPDF/issues",
-                "source": "https://github.com/tecnickcom/TCPDF/tree/6.9.3"
+                "source": "https://github.com/tecnickcom/TCPDF/tree/6.9.4"
             },
             "funding": [
                 {
-                    "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&currency_code=GBP&business=paypal@tecnick.com&item_name=donation%20for%20tcpdf%20project",
+                    "url": "https://www.paypal.com/donate/?hosted_button_id=NZUEC5XS8MFBJ",
                     "type": "custom"
                 }
             ],

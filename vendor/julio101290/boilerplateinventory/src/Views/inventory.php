@@ -47,7 +47,7 @@
                 <a href="<?= base_url("admin/newInventory") ?>" class="btn btn-primary btnAddCustumers" data-target="#modalAddCustumers"><i class="fa fa-plus"></i>
 
                     Nueva Entrada/Salida
-
+                   
                 </a>
 
             </div>
@@ -68,47 +68,47 @@
 
                                 <th>#</th>
                                 <th>
-                                    Nombre Proveedor
+                                    <?= lang("inventory.fields.firstname") ?> 
                                 </th>
 
                                 <th>
-                                    Apellido Proveedor
+                                     <?= lang("inventory.fields.lastname") ?> 
                                 </th>
                                 <th>
-                                    Fecha
-                                </th>
-
-                                <th>
-                                    Fecha Vencimiento
-                                </th>
-                                <th>
-                                    SubTotal
-                                </th>
-                                <th>
-                                    Impuesto
-                                </th>
-                                <th>
-                                    Total
+                                     <?= lang("inventory.fields.date") ?> 
                                 </th>
 
                                 <th>
-                                    Pendiente
+                                     <?= lang("inventory.fields.expirationDate") ?> 
                                 </th>
                                 <th>
-                                    Tiempo Entrega
+                                     <?= lang("inventory.fields.subTotal") ?> 
                                 </th>
                                 <th>
-                                    Creado
+                                     <?= lang("inventory.fields.subTotal") ?> 
                                 </th>
                                 <th>
-                                    Modificado
-                                </th>
-                                <th>
-                                    Eliminado
+                                    <?= lang("inventory.fields.Total") ?> 
                                 </th>
 
                                 <th>
-                                    Acciones
+                                    <?= lang("inventory.fields.pendingPayment") ?> 
+                                </th>
+                                <th>
+                                   <?= lang("inventory.fields.timeDelevery") ?> 
+                                </th>
+                                <th>
+                                    <?= lang("inventory.fields.created_at") ?> 
+                                </th>
+                                <th>
+                                    <?= lang("inventory.fields.updated_at") ?> 
+                                </th>
+                                <th>
+                                    <?= lang("inventory.fields.deleted_at") ?> 
+                                </th>
+
+                                <th>
+                                    <?= lang("inventory.fields.actions") ?> 
                                 </th>
 
                             </tr>

@@ -35,32 +35,33 @@ class VehiculosModel extends Model {
     protected $skipValidation = false;
 
     public function mdlGetVehiculos($idEmpresas) {
+        $builder = $this->db->table('vehiculos a');
 
-        $result = $this->db->table('vehiculos a, empresas b, tipovehiculo c')
-                ->select('a.id
-                         ,b.nombre as nombreEmpresa
-                         ,a.idEmpresa
-                         ,a.idTipoVehiculo
-                         ,c.codigo as codigoTipo
-                         ,c.descripcion as descripcionTipo
-                         ,a.descripcion
-                         ,a.placas
-                         ,a.permSCT
-                         ,a.numPermisoSCT
-                         ,a.configVehicular
-                         ,a.pesoBrutoVehicular
-                         ,a.anioModelo
-                         ,a.aseguraRespCivil
-                         ,a.polizaRespCivil
-                         ,a.created_at
-                         ,a.updated_at
-                         ,a.deleted_at 
-                         ,b.nombre as nombreEmpresa')
-                ->where('a.idEmpresa', 'b.id', FALSE)
-                ->where('a.idTipoVehiculo', 'c.id', FALSE)
-                ->whereIn('a.idEmpresa', $idEmpresas);
+        $builder->select([
+            'a.id AS id',
+            'b.nombre AS nombreEmpresa',
+            'a.idEmpresa AS idEmpresa',
+            'a.idTipoVehiculo AS idTipoVehiculo',
+            'c.codigo AS codigoTipo',
+            'c.descripcion AS descripcionTipo',
+            'a.descripcion AS descripcion',
+            'a.placas AS placas',
+            'a.permSCT AS permSCT',
+            'a.numPermisoSCT AS numPermisoSCT',
+            'a.configVehicular AS configVehicular',
+            'a.pesoBrutoVehicular AS pesoBrutoVehicular',
+            'a.anioModelo AS anioModelo',
+            'a.aseguraRespCivil AS aseguraRespCivil',
+            'a.polizaRespCivil AS polizaRespCivil',
+            'a.created_at AS created_at',
+            'a.updated_at AS updated_at',
+            'a.deleted_at AS deleted_at'
+        ]);
 
-        return $result;
+        $builder->join('empresas b', 'a.idEmpresa = b.id');
+        $builder->join('tipovehiculo c', 'a.idTipoVehiculo = c.id');
+        $builder->whereIn('a.idEmpresa', $idEmpresas);
+
+        return $builder;
     }
-
 }

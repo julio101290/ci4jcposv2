@@ -26,6 +26,13 @@ class SaldosModel extends Model {
     protected $createdField = 'created_at';
     protected $deletedField = 'deleted_at';
     protected $validationRules = [
+        'idEmpresa' => 'required|is_natural_no_zero|max_length[20]',
+        'idAlmacen' => 'required|is_natural_no_zero|max_length[20]',
+        'lote' => 'string|max_length[128]',
+        'idProducto' => 'required|is_natural_no_zero|max_length[20]',
+        'codigoProducto' => 'string|max_length[64]',
+        'descripcion' => 'required|string|max_length[1024]',
+        'cantidad' => 'required|decimal',
     ];
     protected $validationMessages = [];
     protected $skipValidation = false;
@@ -49,5 +56,4 @@ class SaldosModel extends Model {
 
         return $result;
     }
-
 }

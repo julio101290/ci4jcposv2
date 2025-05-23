@@ -15,6 +15,7 @@ use julio101290\boilerplatecompanies\Models\EmpresasModel;
 use julio101290\boilerplatecustumers\Models\CustumersModel;
 use julio101290\boilerplatetypesmovement\Models\Tipos_movimientos_inventarioModel;
 use julio101290\boilerplateinventory\Models\SaldosModel;
+use julio101290\boilerplatesuppliers\Models\ProveedoresModel;
 
 class InventoryController extends BaseController {
 
@@ -30,6 +31,7 @@ class InventoryController extends BaseController {
     protected $products;
     protected $tiposMovimiento;
     protected $saldos;
+    protected $suppliers;
 
     public function __construct() {
         $this->log = new LogModel();
@@ -43,6 +45,7 @@ class InventoryController extends BaseController {
         $this->tiposMovimiento = new Tipos_movimientos_inventarioModel();
         $this->saldos = new SaldosModel();
         $this->storages = new StoragesModel();
+        $this->suppliers = new ProveedoresModel();
 
         helper('menu');
         helper('utilerias');
@@ -80,26 +83,23 @@ class InventoryController extends BaseController {
         }
 
 
-        $titulos["listaTitle"] = "Administracion de ventas";
-        $titulos["listaSubtitle"] = "Muestra la lista de ventas";
+        $titulos["Title"] = lang("inventory.title");
+        $titulos["Subtitle"] = lang("inventory.subttle");
 
         //$data["data"] = $datos;
         return view('julio101290\boilerplateinventory\Views\inventory', $titulos);
     }
 
-
-        /**
+    /**
      * Get Products Inventory
      */
-
-     public function getAllProductsInventory($empresa, $idStorage, $idTipoMovimiento) {
-
+    public function getAllProductsInventory($empresa, $idStorage, $idTipoMovimiento) {
 
 
-       
+
+
         helper('auth');
 
-   
         $idUser = user()->id;
         $titulos["empresas"] = $this->empresa->mdlEmpresasPorUsuario($idUser);
 
@@ -142,8 +142,6 @@ class InventoryController extends BaseController {
 
         $datos = $this->products->mdlProductosEmpresaInventarioEntrada($empresasID, $empresa);
         return \Hermawan\DataTables\DataTable::of($datos)->toJson(true);
-
-     
     }
 
     public function inventoryFilters($desdeFecha, $hastaFecha, $todas) {
@@ -169,7 +167,7 @@ class InventoryController extends BaseController {
             $empresasID = array_column($titulos["empresas"], "id");
         }
 
-      
+
 
         if ($this->request->isAJAX()) {
 
@@ -354,7 +352,16 @@ class InventoryController extends BaseController {
         $titulos["nombreTipoInventario"] = $tiposInventario["descripcion"];
 
         $titulos["idProveedor"] = $inventory["idProveedor"];
-        $titulos["nameProveedor"] = $inventory["nameProveedor"];
+             if(isset($inventory["nameProveedor"])){
+            
+            $titulos["nameProveedor"] = $inventory["nameProveedor"];
+            
+        }else{
+            
+             $titulos["nameProveedor"] = $inventory["nameproveedor"];
+            
+        }
+        
         $titulos["idEmpresa"] = $inventory["idEmpresa"];
         $titulos["nombreEmpresa"] = $inventory["nombreEmpresa"];
 
@@ -495,6 +502,8 @@ class InventoryController extends BaseController {
                         $datosSaldo["idAlmacen"] = $datos["idStorage"];
                         $datosSaldo["idProducto"] = $datosDetalle["idProduct"];
                         $datosSaldo["lote"] = $datosDetalle["lote"];
+                        $datosSaldo["descripcion"] = $datosDetalle["description"];
+                        $datosSaldo["codigoProducto"] = $datosDetalle["codeProduct"];
 
                         if ($tiposMovimiento["tipo"] == "ENT") {
 
@@ -518,7 +527,7 @@ class InventoryController extends BaseController {
                                     return;
                                 }
 
-                                if ($this->saldos->save($datosSaldo) === false) {
+                                if ($this->saldos->insert($datosSaldo) === false) {
 
 
                                     $errores = $this->saldos->errors();
@@ -1196,18 +1205,42 @@ class InventoryController extends BaseController {
      */
     public function report($uuid, $isMail = 0) {
 
-        $pdf = new PDFLayout(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+        $pdf = new PDFLayoutInventory(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
-        $dataSells = $this->sells->where("uuid", $uuid)->first();
+        $dataInventory = $this->inventory->where("UUID", $uuid)->first();
 
-        $listProducts = json_decode($dataSells["listProducts"], true);
+        $listProducts = json_decode($dataInventory["listProducts"], true);
 
-        $user = $this->user->where("id", $dataSells["idUser"])->first()->toArray();
+        $user = $this->user->where("id", $dataInventory["idUser"])->first()->toArray();
+        
+        
+        if($dataInventory["tipoES"] =="SAL"){
+            
+            $custumer = $this->custumer->where("id", $dataInventory["idCustumer"])->where("deleted_at", null)->first();
+            
+                $clienteProveedor = <<<EOF
+                Cliente: $custumer[firstname] $custumer[lastname] 
+                
+                EOF;
 
-        $custumer = $this->custumer->where("id", $dataSells["idCustumer"])->where("deleted_at", null)->first();
+                $custumerData["email"] = $custumer["email"];
+            
+            
+        }else{
+            
+            $suppliers = $this->suppliers->where("id", $dataInventory["idProveedor"])->where("deleted_at", null)->first();
+            
+                $clienteProveedor = <<<EOF
+                Proveedor: $suppliers[firstname] $suppliers[lastname] 
+                
+                EOF;
+            
+                $custumerData["email"] = $suppliers["email"];
+        }
+        
 
-        $datosEmpresa = $this->empresa->select("*")->where("id", $dataSells["idEmpresa"])->first();
-        $datosEmpresaObj = $this->empresa->select("*")->where("id", $dataSells["idEmpresa"])->asObject()->first();
+        $datosEmpresa = $this->empresa->select("*")->where("id", $dataInventory["idEmpresa"])->first();
+        $datosEmpresaObj = $this->empresa->select("*")->where("id", $dataInventory["idEmpresa"])->asObject()->first();
 
         $pdf->nombreDocumento = "Nota De Venta";
         $pdf->direccion = $datosEmpresaObj->direccion;
@@ -1219,7 +1252,7 @@ class InventoryController extends BaseController {
 
             $pdf->logo = ROOTPATH . "public/images/logo/" . $datosEmpresaObj->logo;
         }
-        $pdf->folio = str_pad($dataSells["folio"], 5, "0", STR_PAD_LEFT);
+        $pdf->folio = str_pad($dataInventory["folio"], 5, "0", STR_PAD_LEFT);
 
         $folioConsulta = "Folio Consulta";
         $fecha = " Fecha: ";
@@ -1274,10 +1307,10 @@ class InventoryController extends BaseController {
         // set font
         //$pdf->SetFont('times', '', 12);
 
-        if ($datosEmpresa["facturacionRD"] == "on" && $dataSells["folioComprobanteRD"] > 0) {
+        if ($datosEmpresa["facturacionRD"] == "on" && $dataInventory["folioComprobanteRD"] > 0) {
 
 
-            $comprobante = $this->comprobantesRD->find($dataSells["tipoComprobanteRD"]);
+            $comprobante = $this->comprobantesRD->find($dataInventory["tipoComprobanteRD"]);
             if ($comprobante["tipoDocumento"] == "COF") {
                 $tipoDocumento = "FACTURA PARA CONSUMIDOR FINAL";
             }
@@ -1294,7 +1327,9 @@ class InventoryController extends BaseController {
             $comprobanteFactura = "";
             $fechaVencimiento = "";
         }
-
+        
+  
+    
         $bloque2 = <<<EOF
 
     
@@ -1311,16 +1346,16 @@ class InventoryController extends BaseController {
                 <td >
     
     
-                Cliente: $custumer[firstname] $custumer[lastname] 
+                $clienteProveedor] 
     
                     <br>
                     Telefono: 000
                     <br>
-                    E-Mail: $custumer[email]
+                    E-Mail: $custumerData[email]
                     <br>
                 </td>
                 <td >
-                    $dataSells[generalObservations]
+                    $dataInventory[generalObservations]
                     $tipoDocumento  <br>
                     $comprobanteFactura  <br>
                     $fechaVencimiento <br>
@@ -1349,13 +1384,13 @@ class InventoryController extends BaseController {
                         $user[firstname] $user[lastname]
                     </td>
                     <td>
-                    $dataSells[date]
+                    $dataInventory[date]
                     </td>
                     <td>
-                    $dataSells[dateVen]
+                    $dataInventory[dateVen]
                     </td>
                     <td>
-                    $dataSells[delivaryTime]
+                    $dataInventory[delivaryTime]
                     </td>
             </tr>
             <tr>
@@ -1453,11 +1488,11 @@ class InventoryController extends BaseController {
          * TOTALES
          */
         $pdf->Setx(43);
-        $subTotal = number_format($dataSells["subTotal"], 2, ".");
-        $impuestos = number_format($dataSells["taxes"], 2, ".");
-        $total = number_format($dataSells["total"], 2, ".");
-        $IVARetenido = number_format($dataSells["IVARetenido"], 2, ".");
-        $ISRRetenido = number_format($dataSells["ISRRetenido"], 2, ".");
+        $subTotal = number_format($dataInventory["subTotal"], 2, ".");
+        $impuestos = number_format($dataInventory["taxes"], 2, ".");
+        $total = number_format($dataInventory["total"], 2, ".");
+        $IVARetenido = number_format($dataInventory["IVARetenido"], 2, ".");
+        $ISRRetenido = number_format($dataInventory["ISRRetenido"], 2, ".");
 
         if ($IVARetenido > 0) {
 
@@ -1577,7 +1612,7 @@ class InventoryController extends BaseController {
       <div style="font-size:11pt;text-align:center;font-weight:bold">Gracias por su compra!</div>
   <br><br>
                   
-          <div style="font-size:8.5pt;text-align:left;font-weight:ligth">UUID DOCUMENTO: $dataSells[UUID]</div>
+          <div style="font-size:8.5pt;text-align:left;font-weight:ligth">UUID DOCUMENTO: $dataInventory[UUID]</div>
           
      
       <div style="font-size:8.5pt;text-align:left;font-weight:ligth">ES RESPONSABILIDAD DEL CLIENTE REVISAR A DETALLE ESTA COTIZACION PARA SU POSTERIOR SURTIDO, UNA VEZ CONFIRMADA, NO HAY CAMBIOS NI DEVOLUCIONES.</div>
@@ -1604,8 +1639,4 @@ class InventoryController extends BaseController {
         // END OF FILE
         //============================================================+
     }
-
-
-
-
 }
