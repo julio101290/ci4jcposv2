@@ -1,6 +1,6 @@
 {
     "name": "julio101290/ci4jcpox",
-    "description": "CodeIgniter4 starter inventory, sells, cuotes and CFDI40 Stamp app",
+    "description": "Este repositorio representa un conjunto de módulos modulares y extensibles desarrollados por Julio101290, diseñados para cubrir funcionalidades esenciales en la gestión empresarial en México, incluyendo inventarios, facturación electrónica (CFDI 4.0), complemento de pago y gestión para Carta Porte.",
     "license": "MIT",
     "type": "project",
     "homepage": "https://codeigniter.com",
