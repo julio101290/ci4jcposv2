@@ -1,9 +1,0 @@
-{
-  "output": "build/cfditopdf.phar",
-  "directories": [
-    "bin",
-    "src",
-    "templates",
-    "vendor"
-  ]
-}
