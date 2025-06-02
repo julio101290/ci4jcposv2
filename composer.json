@@ -36,6 +36,7 @@
         "julio101290/boilerplatesuppliers": "^1.0",
         "julio101290/boilerplatetypesmovement": "^1.0",
         "julio101290/boilerplatevehicles": "^1.0",
+        "julio101290/postgresql-backup-manager": "^1.0",
         "phpcfdi/sat-catalogos": "^0.3.1"
     },
     "require-dev": {

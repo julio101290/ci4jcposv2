@@ -57,8 +57,10 @@ class Database extends Config
             'time'     => 'H:i:s',
         ],
     ];
-    
+ * 
+ * 
  */
+    
 /*
             public array $default = [
             'DSN'        => '',
@@ -90,7 +92,7 @@ class Database extends Config
      * @var array
      */
 
-  
+
         public array $default = [
             'DSN'        => '',
             'hostname'   => '127.0.0.1', // Cambia a la dirección de tu servidor PostgreSQL si es diferente
@@ -113,8 +115,8 @@ class Database extends Config
                 'time'     => 'H:i:s',
             ],
         ];
- 
-   
+
+
     //    /**
     //     * Sample database connection for SQLite3.
     //     *
