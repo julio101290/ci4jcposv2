@@ -1,7 +1,5 @@
-<?php
+<script>
 
-use CodeIgniter\CLI\CLI;
+    window.location = "<?= base_url("admin/error404") ?>";
 
-CLI::error('ERROR: ' . $code);
-CLI::write($message);
-CLI::newLine();
+</script>

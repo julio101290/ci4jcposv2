@@ -18,4 +18,6 @@ $routes->group('admin', function ($routes) {
     
     $routes->post('sapservicelayer/save', 'SapservicelayerController::save');
     
+    $routes->get('error404', 'Home::error404');
+    
 });
