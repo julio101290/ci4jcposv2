@@ -673,16 +673,16 @@
         },
         {
             "name": "julio101290/boilerplate",
-            "version": "v1.4.3",
+            "version": "v1.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplate.git",
-                "reference": "66759cb6b5880821d66752c3b09ed6952779cc7d"
+                "reference": "a709a59f0dea8774b40c8cc7b02f54e3d76671ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplate/zipball/66759cb6b5880821d66752c3b09ed6952779cc7d",
-                "reference": "66759cb6b5880821d66752c3b09ed6952779cc7d",
+                "url": "https://api.github.com/repos/julio101290/boilerplate/zipball/a709a59f0dea8774b40c8cc7b02f54e3d76671ea",
+                "reference": "a709a59f0dea8774b40c8cc7b02f54e3d76671ea",
                 "shasum": ""
             },
             "require": {
@@ -719,7 +719,7 @@
                 "codeigniter4"
             ],
             "support": {
-                "source": "https://github.com/julio101290/boilerplate/tree/v1.4.3"
+                "source": "https://github.com/julio101290/boilerplate/tree/v1.4.4"
             },
             "funding": [
                 {
@@ -735,7 +735,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2025-05-06T17:38:10+00:00"
+            "time": "2025-06-11T17:31:35+00:00"
         },
         {
             "name": "julio101290/boilerplatebranchoffice",
@@ -3066,16 +3066,16 @@
         },
         {
             "name": "spipu/html2pdf",
-            "version": "v5.3.2",
+            "version": "v5.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spipu/html2pdf.git",
-                "reference": "501da93523760875682cfdc755ea413055b3a1a1"
+                "reference": "98416dd8eadd3b966f41430b841d3e4dd6eadc6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spipu/html2pdf/zipball/501da93523760875682cfdc755ea413055b3a1a1",
-                "reference": "501da93523760875682cfdc755ea413055b3a1a1",
+                "url": "https://api.github.com/repos/spipu/html2pdf/zipball/98416dd8eadd3b966f41430b841d3e4dd6eadc6f",
+                "reference": "98416dd8eadd3b966f41430b841d3e4dd6eadc6f",
                 "shasum": ""
             },
             "require": {
@@ -3117,9 +3117,9 @@
             ],
             "support": {
                 "issues": "https://github.com/spipu/html2pdf/issues",
-                "source": "https://github.com/spipu/html2pdf/tree/v5.3.2"
+                "source": "https://github.com/spipu/html2pdf/tree/v5.3.3"
             },
-            "time": "2025-04-25T09:05:34+00:00"
+            "time": "2025-06-08T21:47:59+00:00"
         },
         {
             "name": "symfony/polyfill-php80",

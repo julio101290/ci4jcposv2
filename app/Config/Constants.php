@@ -93,4 +93,15 @@ define('EVENT_PRIORITY_NORMAL', 100);
  */
 define('EVENT_PRIORITY_HIGH', 10);
 
+if (PHP_SAPI === 'cli' || defined('STDIN')) {
+    // Si estás en consola (php spark serve o comandos), usa localhost
+    $protocol = 'http://localhost:8080/';
+} else {
+    $isHttps = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off';
+    $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+    $protocol = ($isHttps ? 'https://' : 'http://') . $host . '/';
+}
+
+defined('BASE') || define('BASE', $protocol);
+
 define("ENVIRONMENT","development");
