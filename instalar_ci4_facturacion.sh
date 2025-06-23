@@ -32,7 +32,7 @@ echo "🎼 Instalando Composer..."
 cd ~
 curl -sS https://getcomposer.org/installer -o composer-setup.php
 HASH=$(curl -sS https://composer.github.io/installer.sig)
-php -r "if (hash_file('sha384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php -r "if (hash_file('sha384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); exit(1); }"
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 rm composer-setup.php
 
@@ -137,6 +137,8 @@ cat <<EOF | sudo tee /etc/apache2/sites-available/facturacion.conf > /dev/null
 </VirtualHost>
 EOF
 
+echo "🛑 Deshabilitando sitio por defecto y habilitando facturacion..."
+sudo a2dissite 000-default.conf || true
 sudo a2ensite facturacion.conf
 sudo systemctl reload apache2
 
@@ -144,5 +146,8 @@ echo "🧪 Ejecutando migraciones y Seeder..."
 cd /var/www/html/facturacion
 sudo -u www-data php spark migrate
 sudo -u www-data php spark db:seed BoilerplateSeeder
+
+echo "📢 Estado de los VirtualHosts:"
+sudo apache2ctl -S
 
 echo "✅ Instalación completa. Visita: http://$(curl -s http://checkip.amazonaws.com)/"
