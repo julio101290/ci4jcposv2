@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 set -e
@@ -44,10 +43,14 @@ sudo composer create-project julio101290/ci4jcpox facturacion
 sudo chown -R www-data:www-data facturacion
 sudo chmod -R 755 facturacion
 
-echo "⚙️ Configurando entorno .env..."
+echo "🔄 Verificando archivo env..."
 cd facturacion
-cp .env.example .env
+if [ -f "env" ] && [ ! -f ".env" ]; then
+    echo "🔄 Renombrando archivo 'env' a '.env'..."
+    mv env .env
+fi
 
+echo "⚙️ Configurando archivo .env..."
 sed -i "s|CI_ENVIRONMENT = .*|CI_ENVIRONMENT = production|g" .env
 sed -i "s|database.default.hostname = .*|database.default.hostname = localhost|g" .env
 sed -i "s|database.default.database = .*|database.default.database = facturacion|g" .env
