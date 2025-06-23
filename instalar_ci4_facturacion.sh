@@ -44,27 +44,6 @@ sudo composer create-project julio101290/ci4jcpox facturacion
 sudo chown -R www-data:www-data facturacion
 sudo chmod -R 755 facturacion
 
-echo "🌐 Configurando VirtualHost para facturacion..."
-
-cat <<EOF | sudo tee /etc/apache2/sites-available/facturacion.conf > /dev/null
-<VirtualHost *:80>
-    ServerAdmin webmaster@localhost
-    DocumentRoot /var/www/html/facturacion/public
-
-    <Directory /var/www/html/facturacion/public>
-        Options Indexes FollowSymLinks
-        AllowOverride All
-        Require all granted
-    </Directory>
-
-    ErrorLog \${APACHE_LOG_DIR}/facturacion_error.log
-    CustomLog \${APACHE_LOG_DIR}/facturacion_access.log combined
-</VirtualHost>
-EOF
-
-sudo a2ensite facturacion.conf
-sudo systemctl reload apache2
-
 echo "🔧 Reemplazando configuración de base de datos para MariaDB..."
 cat <<EOL | sudo tee /var/www/html/facturacion/app/Config/Database.php > /dev/null
 <?php
@@ -141,9 +120,29 @@ class Database extends Config
 }
 EOL
 
+echo "🌐 Configurando VirtualHost para facturacion..."
+cat <<EOF | sudo tee /etc/apache2/sites-available/facturacion.conf > /dev/null
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/html/facturacion/public
+
+    <Directory /var/www/html/facturacion/public>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/facturacion_error.log
+    CustomLog \${APACHE_LOG_DIR}/facturacion_access.log combined
+</VirtualHost>
+EOF
+
+sudo a2ensite facturacion.conf
+sudo systemctl reload apache2
+
 echo "🧪 Ejecutando migraciones y Seeder..."
 cd /var/www/html/facturacion
 sudo -u www-data php spark migrate
 sudo -u www-data php spark db:seed BoilerplateSeeder
 
-echo "✅ Todo listo. Accede desde tu navegador: http://<IP_PUBLICA>/"
+echo "✅ Instalación completa. Visita: http://$(curl -s http://checkip.amazonaws.com)/"
