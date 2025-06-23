@@ -39,55 +39,90 @@ rm composer-setup.php
 echo "📁 Instalando el proyecto ci4jcpox en /var/www/html/facturacion..."
 cd /var/www/html
 sudo rm -rf facturacion
+export COMPOSER_ALLOW_SUPERUSER=1
 sudo composer create-project julio101290/ci4jcpox facturacion
 sudo chown -R www-data:www-data facturacion
 sudo chmod -R 755 facturacion
 
-echo "🔄 Verificando archivo env..."
-cd facturacion
-if [ -f "env" ] && [ ! -f ".env" ]; then
-    echo "🔄 Renombrando archivo 'env' a '.env'..."
-    mv env .env
-fi
+echo "🔧 Reemplazando configuración de base de datos para MariaDB..."
+cat <<EOL | sudo tee /var/www/html/facturacion/app/Config/Database.php > /dev/null
+<?php
 
-echo "⚙️ Configurando archivo .env..."
-sed -i "s|CI_ENVIRONMENT = .*|CI_ENVIRONMENT = production|g" .env
-sed -i "s|database.default.hostname = .*|database.default.hostname = localhost|g" .env
-sed -i "s|database.default.database = .*|database.default.database = facturacion|g" .env
-sed -i "s|database.default.username = .*|database.default.username = facturacion|g" .env
-sed -i "s|database.default.password = .*|database.default.password = ci4jcpos$$|g" .env
-sed -i "s|database.default.DBDriver = .*|database.default.DBDriver = MySQLi|g" .env
+namespace Config;
 
-echo "🌐 Configurando VirtualHost para facturacion..."
-VHOST_PATH="/etc/apache2/sites-available/facturacion.conf"
+use CodeIgniter\Database\Config;
 
-sudo bash -c "cat > $VHOST_PATH" <<EOL
-<VirtualHost *:80>
-    ServerAdmin webmaster@localhost
-    DocumentRoot /var/www/html/facturacion/public
-    ServerName facturacion.local
+class Database extends Config
+{
+    public string \$filesPath = APPPATH . 'Database' . DIRECTORY_SEPARATOR;
+    public string \$defaultGroup = 'default';
 
-    <Directory /var/www/html/facturacion/public>
-        AllowOverride All
-        Require all granted
-    </Directory>
+    public array \$default = [
+        'DSN'          => '',
+        'hostname'     => '127.0.0.1',
+        'username'     => 'facturacion',
+        'password'     => 'ci4jcpos$$',
+        'database'     => 'facturacion',
+        'DBDriver'     => 'MySQLi',
+        'DBPrefix'     => '',
+        'pConnect'     => false,
+        'DBDebug'      => true,
+        'charset'      => 'utf8mb4',
+        'DBCollat'     => 'utf8mb4_general_ci',
+        'swapPre'      => '',
+        'encrypt'      => false,
+        'compress'     => false,
+        'strictOn'     => false,
+        'failover'     => [],
+        'port'         => 3306,
+        'numberNative' => false,
+        'dateFormat'   => [
+            'date'     => 'Y-m-d',
+            'datetime' => 'Y-m-d H:i:s',
+            'time'     => 'H:i:s',
+        ],
+    ];
 
-    ErrorLog \${APACHE_LOG_DIR}/facturacion_error.log
-    CustomLog \${APACHE_LOG_DIR}/facturacion_access.log combined
-</VirtualHost>
+    public array \$tests = [
+        'DSN'         => '',
+        'hostname'    => '127.0.0.1',
+        'username'    => '',
+        'password'    => '',
+        'database'    => ':memory:',
+        'DBDriver'    => 'SQLite3',
+        'DBPrefix'    => 'db_',
+        'pConnect'    => false,
+        'DBDebug'     => true,
+        'charset'     => 'utf8',
+        'DBCollat'    => '',
+        'swapPre'     => '',
+        'encrypt'     => false,
+        'compress'    => false,
+        'strictOn'    => false,
+        'failover'    => [],
+        'port'        => 3306,
+        'foreignKeys' => true,
+        'busyTimeout' => 1000,
+        'dateFormat'  => [
+            'date'     => 'Y-m-d',
+            'datetime' => 'Y-m-d H:i:s',
+            'time'     => 'H:i:s',
+        ],
+    ];
+
+    public function __construct()
+    {
+        parent::__construct();
+        if (ENVIRONMENT === 'testing') {
+            \$this->defaultGroup = 'tests';
+        }
+    }
+}
 EOL
 
-sudo a2ensite facturacion.conf
-sudo a2dissite 000-default.conf
-sudo systemctl reload apache2
-
-echo "🔐 Ajustando /etc/hosts para entorno local (opcional)..."
-echo "127.0.0.1 facturacion.local" | sudo tee -a /etc/hosts
-
 echo "🧪 Ejecutando migraciones y Seeder..."
+cd /var/www/html/facturacion
 sudo -u www-data php spark migrate
 sudo -u www-data php spark db:seed BoilerplateSeeder
 
-echo "✅ Instalación completada. Accede desde tu navegador:"
-echo "👉 http://<TU_IP_PUBLICA>/ (si no usas dominio)"
-echo "👉 http://facturacion.local/ (si estás en entorno local)"
+echo "✅ Todo listo. Accede desde tu navegador: http://<IP_PUBLICA>/"
