@@ -22,7 +22,7 @@ FLUSH PRIVILEGES;
 EOF
 
 echo "🐘 Instalando PHP y extensiones necesarias..."
-sudo apt install php php-mysql php-intl php-curl php-xml php-mbstring php-cli php-sqlite3 php-gd unzip -y
+sudo apt install php php-mysql php-intl php-curl php-bcmath php-xml php-mbstring php-cli php-sqlite3 php-gd unzip -y
 
 echo "🧩 Activando mod_rewrite..."
 sudo a2enmod rewrite
