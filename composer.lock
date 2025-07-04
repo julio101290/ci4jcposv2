@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "403c5bd534ac2dc39dc2ce69f48ecf74",
+    "content-hash": "f016e78d769d68cdd06a35704215ecb7",
     "packages": [
         {
             "name": "brick/math",
@@ -316,6 +316,55 @@
                 "source": "https://github.com/eclipxe13/enum"
             },
             "time": "2025-03-30T06:46:19+00:00"
+        },
+        {
+            "name": "eclipxe/micro-catalog",
+            "version": "v0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eclipxe13/micro-catalog.git",
+                "reference": "e94aca927c5cba1f86bd392e5977bbebe67e0576"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eclipxe13/micro-catalog/zipball/e94aca927c5cba1f86bd392e5977bbebe67e0576",
+                "reference": "e94aca927c5cba1f86bd392e5977bbebe67e0576",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Eclipxe\\MicroCatalog\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Carlos C Soto",
+                    "email": "eclipxe13@gmail.com",
+                    "homepage": "https://eclipxe.com.mx/"
+                }
+            ],
+            "description": "Micro catalog template class, useful to create value objects based on a known small catalog",
+            "homepage": "https://github.com/eclipxe13/micro-catalog",
+            "keywords": [
+                "catalog",
+                "generic"
+            ],
+            "support": {
+                "issues": "https://github.com/eclipxe13/micro-catalog/issues",
+                "source": "https://github.com/eclipxe13/micro-catalog"
+            },
+            "time": "2025-03-31T03:05:27+00:00"
         },
         {
             "name": "eclipxe/xmlresourceretriever",
@@ -948,16 +997,16 @@
         },
         {
             "name": "julio101290/boilerplatecfdi",
-            "version": "v1.0.3",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplateCFDI.git",
-                "reference": "0a7b8c493ac56fb9b750fca26ed477a6b73312d7"
+                "reference": "76d972e1143bceae3734986167c952248b3a7099"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplateCFDI/zipball/0a7b8c493ac56fb9b750fca26ed477a6b73312d7",
-                "reference": "0a7b8c493ac56fb9b750fca26ed477a6b73312d7",
+                "url": "https://api.github.com/repos/julio101290/boilerplateCFDI/zipball/76d972e1143bceae3734986167c952248b3a7099",
+                "reference": "76d972e1143bceae3734986167c952248b3a7099",
                 "shasum": ""
             },
             "require": {
@@ -1012,9 +1061,82 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplateCFDI/issues",
-                "source": "https://github.com/julio101290/boilerplateCFDI/tree/v1.0.3"
+                "source": "https://github.com/julio101290/boilerplateCFDI/tree/v1.0.5"
             },
-            "time": "2025-01-29T17:46:22+00:00"
+            "time": "2025-06-26T23:47:57+00:00"
+        },
+        {
+            "name": "julio101290/boilerplatecfdidescargamasiva",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/julio101290/boilerplateCFDIDescargaMasiva.git",
+                "reference": "991857f85d7f6cc16fd1707ddd2b7c2679accb4f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/julio101290/boilerplateCFDIDescargaMasiva/zipball/991857f85d7f6cc16fd1707ddd2b7c2679accb4f",
+                "reference": "991857f85d7f6cc16fd1707ddd2b7c2679accb4f",
+                "shasum": ""
+            },
+            "require": {
+                "codeigniter4/framework": "^4.1",
+                "codeigniter4/translations": "^4.0",
+                "julio101290/auth": "^1.0",
+                "julio101290/boilerplate": "^1.0",
+                "julio101290/boilerplatecustumers": "^1.0.0",
+                "julio101290/boilerplateinventory": "^1.0.0",
+                "julio101290/boilerplatelog": "^1.0.0",
+                "julio101290/boilerplatestorages": "^1.0.0",
+                "julio101290/boilerplatesuppliers": "^1.0.0",
+                "julio101290/boilerplatetypesmovement": "^1.0.0",
+                "php": "^7.3 || ^8.0",
+                "phpcfdi/cfdi-to-json": "^0.3.2",
+                "phpcfdi/cfditopdf": "^0.4.0",
+                "phpcfdi/sat-catalogos": "^0.3.1",
+                "phpcfdi/sat-estado-cfdi": "^1.0",
+                "phpcfdi/sat-estado-cfdi-soap": "^1.0",
+                "phpcfdi/sat-ws-descarga-masiva": "^0.5.2",
+                "phpcfdi/xml-cancelacion": "^2.0"
+            },
+            "require-dev": {
+                "fakerphp/faker": "^1.13",
+                "phpunit/phpunit": "^9.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "julio101290\\boilerplateCFDIDescargaMasiva\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "julio101920",
+                    "email": "juliocesar101290@hotmail.com"
+                }
+            ],
+            "description": "library for the administration of CFDI electronic invoices, printing, uploading, downloading, etc.",
+            "keywords": [
+                "authorization",
+                "backup",
+                "boilerplate",
+                "cfdi",
+                "codeigniter4",
+                "companies",
+                "crud",
+                "invoice",
+                "mysql",
+                "quotes"
+            ],
+            "support": {
+                "issues": "https://github.com/julio101290/boilerplateCFDIDescargaMasiva/issues",
+                "source": "https://github.com/julio101290/boilerplateCFDIDescargaMasiva/tree/v1.0.1"
+            },
+            "time": "2025-06-24T17:26:06+00:00"
         },
         {
             "name": "julio101290/boilerplatecfdielectronicseries",
@@ -1155,16 +1277,16 @@
         },
         {
             "name": "julio101290/boilerplatecomplementopago",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplateComplementoPago.git",
-                "reference": "4348b6682e096cef0499ebbfd576e5b8fc0aa923"
+                "reference": "de25cb5a8f5e95a9cbb8be8fa8e20404819dc559"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplateComplementoPago/zipball/4348b6682e096cef0499ebbfd576e5b8fc0aa923",
-                "reference": "4348b6682e096cef0499ebbfd576e5b8fc0aa923",
+                "url": "https://api.github.com/repos/julio101290/boilerplateComplementoPago/zipball/de25cb5a8f5e95a9cbb8be8fa8e20404819dc559",
+                "reference": "de25cb5a8f5e95a9cbb8be8fa8e20404819dc559",
                 "shasum": ""
             },
             "require": {
@@ -1216,9 +1338,9 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplateComplementoPago/issues",
-                "source": "https://github.com/julio101290/boilerplateComplementoPago/tree/v1.0.0"
+                "source": "https://github.com/julio101290/boilerplateComplementoPago/tree/v1.0.1"
             },
-            "time": "2025-01-30T23:57:04+00:00"
+            "time": "2025-06-26T23:43:01+00:00"
         },
         {
             "name": "julio101290/boilerplatecomprobanterd",
@@ -1403,16 +1525,16 @@
         },
         {
             "name": "julio101290/boilerplateinventory",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplateInventory.git",
-                "reference": "e3dcfb8f86878f629cf673f23a5e42853cc4f014"
+                "reference": "1a78dfe40496c81022b953544a212f0702018367"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplateInventory/zipball/e3dcfb8f86878f629cf673f23a5e42853cc4f014",
-                "reference": "e3dcfb8f86878f629cf673f23a5e42853cc4f014",
+                "url": "https://api.github.com/repos/julio101290/boilerplateInventory/zipball/1a78dfe40496c81022b953544a212f0702018367",
+                "reference": "1a78dfe40496c81022b953544a212f0702018367",
                 "shasum": ""
             },
             "require": {
@@ -1460,22 +1582,22 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplateInventory/issues",
-                "source": "https://github.com/julio101290/boilerplateInventory/tree/v1.0.1"
+                "source": "https://github.com/julio101290/boilerplateInventory/tree/v1.0.2"
             },
-            "time": "2025-05-16T19:08:41+00:00"
+            "time": "2025-06-17T00:08:27+00:00"
         },
         {
             "name": "julio101290/boilerplatelocations",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplateLocations.git",
-                "reference": "f9b3b069a3a374728d8a299eb133763b73fa4466"
+                "reference": "eb3bc1787c51472894fbbefcc690a91ebf155f05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplateLocations/zipball/f9b3b069a3a374728d8a299eb133763b73fa4466",
-                "reference": "f9b3b069a3a374728d8a299eb133763b73fa4466",
+                "url": "https://api.github.com/repos/julio101290/boilerplateLocations/zipball/eb3bc1787c51472894fbbefcc690a91ebf155f05",
+                "reference": "eb3bc1787c51472894fbbefcc690a91ebf155f05",
                 "shasum": ""
             },
             "require": {
@@ -1529,9 +1651,9 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplateLocations/issues",
-                "source": "https://github.com/julio101290/boilerplateLocations/tree/v1.0.0"
+                "source": "https://github.com/julio101290/boilerplateLocations/tree/v1.0.1"
             },
-            "time": "2025-02-05T23:31:56+00:00"
+            "time": "2025-06-28T18:15:09+00:00"
         },
         {
             "name": "julio101290/boilerplatelog",
@@ -1589,16 +1711,16 @@
         },
         {
             "name": "julio101290/boilerplateproducts",
-            "version": "v1.0.5",
+            "version": "v1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplateproducts.git",
-                "reference": "71a538a42dca3b11b1eec0ec639bb23b43fecf8a"
+                "reference": "ba111319aefdcb1dd40de85ffc3f9f5fba3afa2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplateproducts/zipball/71a538a42dca3b11b1eec0ec639bb23b43fecf8a",
-                "reference": "71a538a42dca3b11b1eec0ec639bb23b43fecf8a",
+                "url": "https://api.github.com/repos/julio101290/boilerplateproducts/zipball/ba111319aefdcb1dd40de85ffc3f9f5fba3afa2d",
+                "reference": "ba111319aefdcb1dd40de85ffc3f9f5fba3afa2d",
                 "shasum": ""
             },
             "require": {
@@ -1644,22 +1766,22 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplateproducts/issues",
-                "source": "https://github.com/julio101290/boilerplateproducts/tree/v1.0.5"
+                "source": "https://github.com/julio101290/boilerplateproducts/tree/v1.0.6"
             },
-            "time": "2025-05-08T22:34:32+00:00"
+            "time": "2025-06-16T23:31:12+00:00"
         },
         {
             "name": "julio101290/boilerplatequotes",
-            "version": "v1.0.2",
+            "version": "v1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplateQuotes.git",
-                "reference": "15e945c7a3fba8eafae56103be2695d9bf4c0ec7"
+                "reference": "4f3eb0615bf62a97ac32c4e38d34ced7d69217c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplateQuotes/zipball/15e945c7a3fba8eafae56103be2695d9bf4c0ec7",
-                "reference": "15e945c7a3fba8eafae56103be2695d9bf4c0ec7",
+                "url": "https://api.github.com/repos/julio101290/boilerplateQuotes/zipball/4f3eb0615bf62a97ac32c4e38d34ced7d69217c9",
+                "reference": "4f3eb0615bf62a97ac32c4e38d34ced7d69217c9",
                 "shasum": ""
             },
             "require": {
@@ -1709,22 +1831,22 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplateQuotes/issues",
-                "source": "https://github.com/julio101290/boilerplateQuotes/tree/v1.0.2"
+                "source": "https://github.com/julio101290/boilerplateQuotes/tree/v1.0.6"
             },
-            "time": "2025-02-11T04:33:07+00:00"
+            "time": "2025-06-20T18:46:39+00:00"
         },
         {
             "name": "julio101290/boilerplateremolques",
-            "version": "dev-main",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplateRemolques.git",
-                "reference": "59050b266a36183075f939d90f2f486605f41531"
+                "reference": "cb47a78c5a75439062f99d3bbe16a3b8c3e025ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplateRemolques/zipball/59050b266a36183075f939d90f2f486605f41531",
-                "reference": "59050b266a36183075f939d90f2f486605f41531",
+                "url": "https://api.github.com/repos/julio101290/boilerplateRemolques/zipball/cb47a78c5a75439062f99d3bbe16a3b8c3e025ab",
+                "reference": "cb47a78c5a75439062f99d3bbe16a3b8c3e025ab",
                 "shasum": ""
             },
             "require": {
@@ -1745,7 +1867,6 @@
                 "fakerphp/faker": "^1.13",
                 "phpunit/phpunit": "^9.1"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -1778,22 +1899,22 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplateRemolques/issues",
-                "source": "https://github.com/julio101290/boilerplateRemolques/tree/main"
+                "source": "https://github.com/julio101290/boilerplateRemolques/tree/v1.0.0"
             },
-            "time": "2025-02-07T00:14:09+00:00"
+            "time": "2025-06-30T17:58:16+00:00"
         },
         {
             "name": "julio101290/boilerplatesells",
-            "version": "v1.0.5",
+            "version": "v1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/julio101290/boilerplateSells.git",
-                "reference": "2643965cc76c628d5a1c20cb29273ee03fcaad77"
+                "reference": "9a6cac856b38e9410018d990347c9eec1f2b1783"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/julio101290/boilerplateSells/zipball/2643965cc76c628d5a1c20cb29273ee03fcaad77",
-                "reference": "2643965cc76c628d5a1c20cb29273ee03fcaad77",
+                "url": "https://api.github.com/repos/julio101290/boilerplateSells/zipball/9a6cac856b38e9410018d990347c9eec1f2b1783",
+                "reference": "9a6cac856b38e9410018d990347c9eec1f2b1783",
                 "shasum": ""
             },
             "require": {
@@ -1844,9 +1965,9 @@
             ],
             "support": {
                 "issues": "https://github.com/julio101290/boilerplateSells/issues",
-                "source": "https://github.com/julio101290/boilerplateSells/tree/v1.0.5"
+                "source": "https://github.com/julio101290/boilerplateSells/tree/v1.0.8"
             },
-            "time": "2025-03-25T18:27:34+00:00"
+            "time": "2025-06-26T22:57:03+00:00"
         },
         {
             "name": "julio101290/boilerplatesettings",
@@ -2378,19 +2499,20 @@
         },
         {
             "name": "michalsn/codeigniter4-uuid",
-            "version": "v1.2.0",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/michalsn/codeigniter4-uuid.git",
-                "reference": "6caa4037ada6a646989d140b41b4a2b087fff035"
+                "reference": "16408c77bcaef920cb93a822018390f8a5674424"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/michalsn/codeigniter4-uuid/zipball/6caa4037ada6a646989d140b41b4a2b087fff035",
-                "reference": "6caa4037ada6a646989d140b41b4a2b087fff035",
+                "url": "https://api.github.com/repos/michalsn/codeigniter4-uuid/zipball/16408c77bcaef920cb93a822018390f8a5674424",
+                "reference": "16408c77bcaef920cb93a822018390f8a5674424",
                 "shasum": ""
             },
             "require": {
+                "ext-ctype": "*",
                 "php": ">=8.1",
                 "ramsey/uuid": "^4.7"
             },
@@ -2425,9 +2547,68 @@
             ],
             "support": {
                 "issues": "https://github.com/michalsn/codeigniter4-uuid/issues",
-                "source": "https://github.com/michalsn/codeigniter4-uuid/tree/v1.2.0"
+                "source": "https://github.com/michalsn/codeigniter4-uuid/tree/v1.3.0"
             },
-            "time": "2025-05-26T15:57:54+00:00"
+            "time": "2025-06-13T05:40:55+00:00"
+        },
+        {
+            "name": "niklongstone/regex-reverse",
+            "version": "0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/niklongstone/regex-reverse.git",
+                "reference": "d1c44416fe65ebc9044d38ba1f47834fabdb90ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/niklongstone/regex-reverse/zipball/d1c44416fe65ebc9044d38ba1f47834fabdb90ad",
+                "reference": "d1c44416fe65ebc9044d38ba1f47834fabdb90ad",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "RegRev\\": "src/RegRev/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicola Pietroluongo",
+                    "email": "nik.longstone@gmail.com",
+                    "homepage": "http://www.nicolapietroluongo.com"
+                }
+            ],
+            "description": "Regular Expression reverter, generates a string from a provided regular expression",
+            "homepage": "https://github.com/niklongstone/reverse-regex",
+            "keywords": [
+                "PCRE",
+                "data",
+                "generation",
+                "preg",
+                "regex",
+                "regular expression",
+                "test"
+            ],
+            "support": {
+                "issues": "https://github.com/niklongstone/regex-reverse/issues",
+                "source": "https://github.com/niklongstone/regex-reverse/tree/0.4.0"
+            },
+            "time": "2015-06-16T10:14:58+00:00"
         },
         {
             "name": "phpcfdi/cfdi-cleaner",
@@ -2667,6 +2848,58 @@
             "time": "2025-04-12T20:29:23+00:00"
         },
         {
+            "name": "phpcfdi/rfc",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpcfdi/rfc.git",
+                "reference": "1040a47d453fcdd6c9e91654c874f5629c5ccd36"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpcfdi/rfc/zipball/1040a47d453fcdd6c9e91654c874f5629c5ccd36",
+                "reference": "1040a47d453fcdd6c9e91654c874f5629c5ccd36",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "fakerphp/faker": "^1.13",
+                "phpunit/phpunit": "^10.5.45"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhpCfdi\\Rfc\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Carlos C Soto",
+                    "email": "eclipxe13@gmail.com",
+                    "homepage": "https://eclipxe.com.mx/"
+                }
+            ],
+            "description": "PHP library to deal with Mexican RFC",
+            "homepage": "https://github.com/phpcfdi/rfc",
+            "keywords": [
+                "mexico",
+                "sat"
+            ],
+            "support": {
+                "issues": "https://github.com/phpcfdi/rfc/issues",
+                "source": "https://github.com/phpcfdi/rfc"
+            },
+            "time": "2025-04-12T20:09:29+00:00"
+        },
+        {
             "name": "phpcfdi/sat-catalogos",
             "version": "v0.3.1",
             "source": {
@@ -2719,17 +2952,200 @@
             "time": "2023-07-04T16:44:16+00:00"
         },
         {
-            "name": "phpcfdi/xml-cancelacion",
-            "version": "v2.0.4",
+            "name": "phpcfdi/sat-estado-cfdi",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/phpcfdi/xml-cancelacion.git",
-                "reference": "0394943617a139529b55b0a390066bcc9cc42086"
+                "url": "https://github.com/phpcfdi/sat-estado-cfdi.git",
+                "reference": "a836ddd0578b2c042840a232c4a37417798cf0a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpcfdi/xml-cancelacion/zipball/0394943617a139529b55b0a390066bcc9cc42086",
-                "reference": "0394943617a139529b55b0a390066bcc9cc42086",
+                "url": "https://api.github.com/repos/phpcfdi/sat-estado-cfdi/zipball/a836ddd0578b2c042840a232c4a37417798cf0a2",
+                "reference": "a836ddd0578b2c042840a232c4a37417798cf0a2",
+                "shasum": ""
+            },
+            "require": {
+                "eclipxe/enum": "^0.2",
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "phpcfdi/cfdi-expresiones": "^3.0",
+                "phpunit/phpunit": "^9.5"
+            },
+            "suggest": {
+                "phpcfdi/cfdi-expresiones": "Genera expresiones de CFDI 3.3, CFDI 3.2 y RET 1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhpCfdi\\SatEstadoCfdi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Carlos C Soto",
+                    "email": "eclipxe13@gmail.com"
+                }
+            ],
+            "description": "Consulta el estado de un cfdi en el webservice del SAT",
+            "homepage": "https://github.com/phpcfdi/sat-estado-cfdi",
+            "keywords": [
+                "ConsultaCFDIService.svc",
+                "cfdi",
+                "phpcfdi",
+                "sat"
+            ],
+            "support": {
+                "issues": "https://github.com/phpcfdi/sat-estado-cfdi/issues",
+                "source": "https://github.com/phpcfdi/sat-estado-cfdi"
+            },
+            "time": "2022-02-23T04:35:50+00:00"
+        },
+        {
+            "name": "phpcfdi/sat-estado-cfdi-soap",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpcfdi/sat-estado-cfdi-soap.git",
+                "reference": "67309e1b58cdeb1504ed96194f55abc4db3e8af1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpcfdi/sat-estado-cfdi-soap/zipball/67309e1b58cdeb1504ed96194f55abc4db3e8af1",
+                "reference": "67309e1b58cdeb1504ed96194f55abc4db3e8af1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-soap": "*",
+                "php": ">=7.3",
+                "phpcfdi/sat-estado-cfdi": "^1.0.2"
+            },
+            "require-dev": {
+                "phpcfdi/cfdi-expresiones": "^3.0",
+                "phpunit/phpunit": "^9.5"
+            },
+            "suggest": {
+                "phpcfdi/cfdi-expresiones": "Genera expresiones de CFDI 3.3, CFDI 3.2 y RET 1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhpCfdi\\SatEstadoCfdi\\Soap\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Carlos C Soto",
+                    "email": "eclipxe13@gmail.com"
+                }
+            ],
+            "description": "Consulta el estado de un CFDI en el webservice del SAT usando SOAP (sin WSDL)",
+            "homepage": "https://github.com/phpcfdi/sat-estado-cfdi-soap",
+            "keywords": [
+                "ConsultaCFDIService.svc",
+                "cfdi",
+                "phpcfdi",
+                "sat"
+            ],
+            "support": {
+                "issues": "https://github.com/phpcfdi/sat-estado-cfdi-soap/issues",
+                "source": "https://github.com/phpcfdi/sat-estado-cfdi-soap"
+            },
+            "abandoned": "phpcfdi/sat-estado-cfdi",
+            "time": "2022-02-23T08:10:19+00:00"
+        },
+        {
+            "name": "phpcfdi/sat-ws-descarga-masiva",
+            "version": "v0.5.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpcfdi/sat-ws-descarga-masiva.git",
+                "reference": "322f005d9ea8db9fa59c7e1ea3ebbf628f73edbe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpcfdi/sat-ws-descarga-masiva/zipball/322f005d9ea8db9fa59c7e1ea3ebbf628f73edbe",
+                "reference": "322f005d9ea8db9fa59c7e1ea3ebbf628f73edbe",
+                "shasum": ""
+            },
+            "require": {
+                "eclipxe/enum": "^0.2.0",
+                "eclipxe/micro-catalog": "^0.1.2",
+                "ext-dom": "*",
+                "ext-json": "*",
+                "ext-libxml": "*",
+                "ext-mbstring": "*",
+                "ext-openssl": "*",
+                "ext-zip": "*",
+                "php": ">=7.3",
+                "phpcfdi/credentials": "^1.1",
+                "phpcfdi/rfc": "^1.1"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "^7.2.0",
+                "phpunit/phpunit": "^9.3.5",
+                "robrichards/xmlseclibs": "^3.1.0"
+            },
+            "suggest": {
+                "guzzlehttp/guzzle": "To use GuzzleWebClient implementation"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhpCfdi\\SatWsDescargaMasiva\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cesar Aguilera",
+                    "email": "cesargnu29@gmail.com"
+                },
+                {
+                    "name": "Carlos C Soto",
+                    "email": "eclipxe13@gmail.com"
+                }
+            ],
+            "description": "Librería para usar el servicio web del SAT de Descarga Masiva",
+            "homepage": "https://github.com/phpcfdi/sat-ws-descarga-masiva",
+            "keywords": [
+                "cfdi",
+                "descarga",
+                "download",
+                "sat",
+                "webservice"
+            ],
+            "support": {
+                "chat": "https://discord.gg/aFGYXvX",
+                "issues": "https://github.com/phpcfdi/sat-ws-descarga-masiva/issues",
+                "source": "https://github.com/phpcfdi/sat-ws-descarga-masiva"
+            },
+            "time": "2025-06-03T21:37:01+00:00"
+        },
+        {
+            "name": "phpcfdi/xml-cancelacion",
+            "version": "v2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpcfdi/xml-cancelacion.git",
+                "reference": "38315682585dfb965e16f601921073c7d2b37111"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpcfdi/xml-cancelacion/zipball/38315682585dfb965e16f601921073c7d2b37111",
+                "reference": "38315682585dfb965e16f601921073c7d2b37111",
                 "shasum": ""
             },
             "require": {
@@ -2776,7 +3192,7 @@
                 "issues": "https://github.com/phpcfdi/xml-cancelacion/issues",
                 "source": "https://github.com/phpcfdi/xml-cancelacion"
             },
-            "time": "2025-06-01T07:28:38+00:00"
+            "time": "2025-06-20T03:23:26+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -2987,21 +3403,20 @@
         },
         {
             "name": "ramsey/uuid",
-            "version": "4.8.1",
+            "version": "4.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "fdf4dd4e2ff1813111bd0ad58d7a1ddbb5b56c28"
+                "reference": "4e0e23cc785f0724a0e838279a9eb03f28b092a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/fdf4dd4e2ff1813111bd0ad58d7a1ddbb5b56c28",
-                "reference": "fdf4dd4e2ff1813111bd0ad58d7a1ddbb5b56c28",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/4e0e23cc785f0724a0e838279a9eb03f28b092a0",
+                "reference": "4e0e23cc785f0724a0e838279a9eb03f28b092a0",
                 "shasum": ""
             },
             "require": {
                 "brick/math": "^0.8.8 || ^0.9 || ^0.10 || ^0.11 || ^0.12 || ^0.13",
-                "ext-json": "*",
                 "php": "^8.0",
                 "ramsey/collection": "^1.2 || ^2.0"
             },
@@ -3060,9 +3475,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/uuid/issues",
-                "source": "https://github.com/ramsey/uuid/tree/4.8.1"
+                "source": "https://github.com/ramsey/uuid/tree/4.9.0"
             },
-            "time": "2025-06-01T06:28:46+00:00"
+            "time": "2025-06-25T14:20:11+00:00"
         },
         {
             "name": "spipu/html2pdf",
@@ -4009,16 +4424,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.5.46",
+            "version": "10.5.47",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "8080be387a5be380dda48c6f41cee4a13aadab3d"
+                "reference": "3637b3e50d32ab3a0d1a33b3b6177169ec3d95a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/8080be387a5be380dda48c6f41cee4a13aadab3d",
-                "reference": "8080be387a5be380dda48c6f41cee4a13aadab3d",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3637b3e50d32ab3a0d1a33b3b6177169ec3d95a3",
+                "reference": "3637b3e50d32ab3a0d1a33b3b6177169ec3d95a3",
                 "shasum": ""
             },
             "require": {
@@ -4090,7 +4505,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.46"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.47"
             },
             "funding": [
                 {
@@ -4114,7 +4529,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-05-02T06:46:24+00:00"
+            "time": "2025-06-20T11:29:11+00:00"
         },
         {
             "name": "psr/container",
@@ -5206,8 +5621,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "julio101290/boilerplatecartaporte": 20,
-        "julio101290/boilerplateremolques": 20
+        "julio101290/boilerplatecartaporte": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -57,10 +57,7 @@ class Database extends Config
             'time'     => 'H:i:s',
         ],
     ];
- * 
- * 
- */
-    
+*/
 /*
             public array $default = [
             'DSN'        => '',

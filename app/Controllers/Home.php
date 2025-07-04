@@ -14,7 +14,7 @@ class Home extends BaseController {
     }
 
     public function index(): string {
-        header("Location: " . site_url() . '/admin');
+        header("Location: " . site_url() . '/admin/sells/dashboard');
         die();
     }
 

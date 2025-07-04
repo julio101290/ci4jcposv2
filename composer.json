@@ -16,9 +16,10 @@
         "julio101290/boilerplatbackup": "^1.0",
         "julio101290/boilerplate": "^1.4",
         "julio101290/boilerplatebranchoffice": "^1.0",
-        "julio101290/boilerplatecartaporte": "dev-main",
+        "julio101290/boilerplatecartaporte": "^1.0",
         "julio101290/boilerplatecashtonnage": "^1.0",
         "julio101290/boilerplatecfdi": "^1.0",
+        "julio101290/boilerplatecfdidescargamasiva": "^1.0",
         "julio101290/boilerplatecfdielectronicseries": "^1.0",
         "julio101290/boilerplatecompanies": "^1.3",
         "julio101290/boilerplatecomplementopago": "^1.0",
@@ -29,7 +30,7 @@
         "julio101290/boilerplatelocations": "^1.0",
         "julio101290/boilerplateproducts": "^1.0",
         "julio101290/boilerplatequotes": "^1.0",
-        "julio101290/boilerplateremolques": "dev-main",
+        "julio101290/boilerplateremolques": "^1.0",
         "julio101290/boilerplatesells": "^1.0",
         "julio101290/boilerplatesettings": "^1.0",
         "julio101290/boilerplatestorages": "^1.0",
@@ -37,6 +38,7 @@
         "julio101290/boilerplatetypesmovement": "^1.0",
         "julio101290/boilerplatevehicles": "^1.0",
         "julio101290/postgresql-backup-manager": "^1.0",
+        "niklongstone/regex-reverse": "^0.4.0",
         "phpcfdi/sat-catalogos": "^0.3.1"
     },
     "require-dev": {

@@ -86,7 +86,9 @@ class BoilerplateSeeder extends Seeder {
             array('id' => '28', 'name' => 'ubicaciones-permission', 'description' => 'Permission for locations letter port CFDI4.0'),
             array('id' => '29', 'name' => 'remolques-permission', 'description' => 'Permission for remolques letter port CFDI4.0'),
             array('id' => '30', 'name' => 'cartaporte-permission', 'description' => 'Permiso para la lista de cartaporte'),
-            array('id' => '31', 'name' => 'sapservicelayer-permission', 'description' => 'Permiso para la lista de sapservicelayer')
+            array('id' => '31', 'name' => 'sapservicelayer-permission', 'description' => 'Permiso para la lista de sapservicelayer'),
+            array('id' => '32', 'name' => 'peticionesdescargamasiva-permission', 'description' => 'CFDI Mass Download Permission'),
+            
         );
 
         foreach ($auth_permissions as $key => $value) {
@@ -130,6 +132,7 @@ class BoilerplateSeeder extends Seeder {
             array('user_id' => '1', 'permission_id' => '29'),
             array('user_id' => '1', 'permission_id' => '30'),
             array('user_id' => '1', 'permission_id' => '31'),
+            array('user_id' => '1', 'permission_id' => '32'),
             array('user_id' => '2', 'permission_id' => '1')
         );
 
@@ -175,7 +178,12 @@ class BoilerplateSeeder extends Seeder {
             array('id' => '35', 'parent_id' => '0', 'active' => '1', 'title' => 'Envios', 'icon' => 'fas fa-car-alt', 'route' => '#', 'sequence' => '10', 'created_at' => '2025-03-12 19:06:33', 'updated_at' => '2025-03-12 19:07:18'),
             array('id' => '36', 'parent_id' => '35', 'active' => '1', 'title' => 'Carta Porte', 'icon' => 'fas fa-share-square', 'route' => 'admin/cartasPorte', 'sequence' => '36', 'created_at' => '2025-03-12 19:15:28', 'updated_at' => '2025-03-12 19:15:28'),
             array('id' => '37', 'parent_id' => '35', 'active' => '1', 'title' => 'Ubicaciones', 'icon' => 'fas fa-location-arrow', 'route' => 'admin/ubicaciones', 'sequence' => '37', 'created_at' => '2025-03-12 19:19:45', 'updated_at' => '2025-03-12 19:19:45'),
-            array('id' => '38', 'parent_id' => '8', 'active' => '1', 'title' => 'SAP Service Layer', 'icon' => 'fas fa-plug', 'route' => 'admin/sapservicelayer', 'sequence' => '38', 'created_at' => '2025-03-31 19:23:45', 'updated_at' => '2025-03-31 19:23:45')
+            array('id' => '38', 'parent_id' => '8', 'active' => '1', 'title' => 'SAP Service Layer', 'icon' => 'fas fa-plug', 'route' => 'admin/sapservicelayer', 'sequence' => '38', 'created_at' => '2025-03-31 19:23:45', 'updated_at' => '2025-03-31 19:23:45'),
+            array('id' => '39', 'parent_id' => '31', 'active' => '1', 'title' => 'Descarga Masiva', 'icon' => 'far fa-file-pdf', 'route' => 'admin/peticionesdescargamasiva', 'sequence' => '39', 'created_at' => '2025-06-27 19:13:41', 'updated_at' => '2025-06-27 19:14:33'),
+            array('id' => '40','parent_id' => '35','active' => '1','title' => 'Remolques','icon' => 'fas fa-truck-loading','route' => 'admin/remolques','sequence' => '40','created_at' => '2025-06-30 17:36:30','updated_at' => '2025-06-30 17:36:30'),
+            array('id' => '41','parent_id' => '35','active' => '1','title' => 'Choferes','icon' => 'fas fa-users','route' => 'admin/choferes','sequence' => '41','created_at' => '2025-06-30 17:36:30','updated_at' => '2025-06-30 17:36:30'),
+            array('id' => '42','parent_id' => '35','active' => '1','title' => 'Lista Cartas Porte','icon' => 'fas fa-list','route' => 'admin/cartasPorte','sequence' => '42','created_at' => '2025-06-30 17:36:30','updated_at' => '2025-06-30 17:36:30'),
+            array('id' => '43','parent_id' => '24','active' => '1','title' => 'Dashboard','icon' => 'fas fa-tachometer-alt','route' => 'admin/sells/dashboard','sequence' => '43','created_at' => '2025-06-30 17:36:30','updated_at' => '2025-06-30 17:36:30')
         );
 
         foreach ($menu as $key => $value) {
@@ -246,7 +254,12 @@ class BoilerplateSeeder extends Seeder {
             array('id' => '65', 'group_id' => '1', 'menu_id' => '37'),
             array('id' => '66', 'group_id' => '2', 'menu_id' => '37'),
             array('id' => '67', 'group_id' => '1', 'menu_id' => '38'),
-            array('id' => '68', 'group_id' => '2', 'menu_id' => '38')
+            array('id' => '67', 'group_id' => '1', 'menu_id' => '38'),
+            array('id' => '68', 'group_id' => '2', 'menu_id' => '39'),
+            array('id' => '69', 'group_id' => '1', 'menu_id' => '40'),
+            array('id' => '70', 'group_id' => '1', 'menu_id' => '41'),
+            array('id' => '71', 'group_id' => '1', 'menu_id' => '42'),
+            array('id' => '72', 'group_id' => '1', 'menu_id' => '43')
         );
 
         foreach ($groups_menu as $key => $value) {
